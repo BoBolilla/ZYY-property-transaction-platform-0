@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-  <div>我是APP</div>
+  <div>我是反馈页</div>
   <div><router-view></router-view></div>
 </template>
 

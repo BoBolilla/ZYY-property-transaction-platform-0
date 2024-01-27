@@ -1,8 +1,7 @@
 <script setup></script>
 
 <template>
-  <div>我是APP</div>
-  <div><router-view></router-view></div>
+  <div>我是宗旨页</div>
 </template>
 
 <style scoped></style>

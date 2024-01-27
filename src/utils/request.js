@@ -1,13 +1,14 @@
 import axios from 'axios'
 
-const baseURL = 'http://big-event-vue-api-t.itheima.net'
+const baseURL = 'www.lxy521.top:8093'
 
 const instance = axios.create({
   // TODO 1. 基础地址，超时时间
   baseURL,
-  timeout: 100
+  timeout: 10000
 })
 
+// 请求拦截器
 instance.interceptors.request.use(
   (config) => {
     // TODO 2. 携带token
@@ -16,6 +17,7 @@ instance.interceptors.request.use(
   (err) => Promise.reject(err)
 )
 
+// 响应拦截器
 instance.interceptors.response.use(
   (res) => {
     // TODO 3. 处理业务失败

@@ -6,6 +6,7 @@
       <h3 text="2xl" justify="center">{{ item }}</h3>
     </el-carousel-item>
   </el-carousel>
+  <el-button type="primary">123</el-button>
 </template>
 
 <style scoped>

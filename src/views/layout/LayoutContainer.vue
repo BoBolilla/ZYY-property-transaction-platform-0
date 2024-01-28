@@ -70,7 +70,8 @@ import { Search } from '@element-plus/icons-vue'
       <el-footer class="container-bottom">
         <div class="footer1">
           <el-row :gutter="20">
-            <el-col :span="8"
+            <el-col :span="1.5"></el-col>
+            <el-col :span="7"
               ><div class="grid-content ep-bg-purple" />
               <div>关于我们</div>
               <div>
@@ -80,7 +81,7 @@ import { Search } from '@element-plus/icons-vue'
                   alt="logo"
                 /></div
             ></el-col>
-            <el-col :span="8"
+            <el-col :span="7"
               ><div class="grid-content ep-bg-purple" />
               <div>联系我们</div>
               <div>Tel：188 8888 8888</div>
@@ -88,10 +89,11 @@ import { Search } from '@element-plus/icons-vue'
               <div>P.C：475001</div>
               <div>E-Mail：1329300101@jsyyx.com</div></el-col
             >
-            <el-col :span="8"
+            <el-col :span="7"
               ><div class="grid-content ep-bg-purple" />
               使用教程</el-col
             >
+            <el-col :span="1.5"></el-col>
           </el-row>
         </div>
         <div class="footer2">

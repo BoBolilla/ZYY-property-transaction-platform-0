@@ -11,9 +11,9 @@ import { Search } from '@element-plus/icons-vue'
           class="el-menu"
           mode="horizontal"
           :ellipsis="false"
-          background-color="#545c64"
-          text-color="#fff"
-          active-text-color="#ffd04b"
+          background-color="#FFFEFE"
+          text-color="#606266"
+          active-text-color="#E46841"
           @select="handleSelect"
           router
         >
@@ -67,7 +67,45 @@ import { Search } from '@element-plus/icons-vue'
         ><div><router-view></router-view></div
       ></el-main>
       <!-- 二级路由出口 -->
-      <el-footer class="container-bottom">Footer</el-footer>
+      <el-footer class="container-bottom">
+        <div class="footer1">
+          <el-row :gutter="20">
+            <el-col :span="8"
+              ><div class="grid-content ep-bg-purple" />
+              <div>关于我们</div>
+              <div>
+                <img
+                  style="width: 190px"
+                  src="../../assets/ZYY-logo.png"
+                  alt="logo"
+                /></div
+            ></el-col>
+            <el-col :span="8"
+              ><div class="grid-content ep-bg-purple" />
+              <div>联系我们</div>
+              <div>Tel：188 8888 8888</div>
+              <div>Add：开封市顺河回族区明伦街85号</div>
+              <div>P.C：475001</div>
+              <div>E-Mail：1329300101@jsyyx.com</div></el-col
+            >
+            <el-col :span="8"
+              ><div class="grid-content ep-bg-purple" />
+              使用教程</el-col
+            >
+          </el-row>
+        </div>
+        <div class="footer2">
+          <div class="row">
+            <div class="content">法律支持</div>
+          </div>
+          <div class="row">
+            <div class="content">
+              豫公网安备41000000000000号 豫ICP备05000000号-1 版权所有 Copyright
+              © 2024
+            </div>
+          </div>
+        </div>
+      </el-footer>
       <!-- 底栏 -->
     </el-container>
   </div>
@@ -94,5 +132,51 @@ import { Search } from '@element-plus/icons-vue'
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+}
+.container-bottom {
+  margin: 0;
+  padding: 0;
+}
+.footer1 {
+  margin: 0;
+  padding: 0;
+  height: 200px;
+  color: white;
+  background-color: #333333;
+}
+.el-row {
+  margin-bottom: 20px;
+}
+.el-row:last-child {
+  margin-bottom: 0;
+}
+.el-col {
+  border-radius: 4px;
+}
+
+.grid-content {
+  border-radius: 4px;
+  min-height: 36px;
+}
+
+.footer2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  height: 70px;
+  background-color: black;
+}
+
+.row {
+  display: flex;
+  margin: 5px;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 </style>

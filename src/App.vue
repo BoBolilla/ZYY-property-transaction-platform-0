@@ -1,7 +1,12 @@
 <script setup></script>
 
 <template>
-  <div><router-view></router-view></div>
+  <div class="all"><router-view></router-view></div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.all {
+  margin: 0;
+  padding: 0;
+}
+</style>

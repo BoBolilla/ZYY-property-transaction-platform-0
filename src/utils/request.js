@@ -1,7 +1,7 @@
 import axios from 'axios'
-import { ElMessage } from 'element-plus'
+//import { ElMessage } from 'element-plus'
 
-const baseURL = 'www.lxy521.top:8093'
+const baseURL = 'http://www.521lxy.top:8093'
 
 const instance = axios.create({
   // TODO 1. 基础地址，超时时间
@@ -28,14 +28,14 @@ instance.interceptors.response.use(
     }
     // TODO 3. 处理业务失败
     // 处理业务失败，给错误提示，抛出错误
-    ElMessage.error(res.data.message || '服务异常')
+    //ElMessage.error(res.data.message || '服务异常')
     return Promise.reject(res.data)
   },
   (err) => {
     // TODO 5. 处理错误
 
     // 错误的特殊情况 => 只给提示
-    ElMessage.error(err.data.message || '服务异常')
+    //ElMessage.error(err.data.message || '服务异常')
     return Promise.reject(err)
   }
 )

@@ -10,7 +10,7 @@ const router = createRouter({
       children: [
         {
           path: '/home', // 首页
-          component: () => import('@/views/layout/HomePage.vue')
+          component: () => import('@/views/home/HomePage.vue')
         },
         {
           path: '/news', // 新闻页

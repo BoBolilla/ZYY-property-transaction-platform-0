@@ -17,6 +17,7 @@ export default defineConfig({
       resolvers: [ElementPlusResolver({ importStyle: 'sass' })]
     })
   ],
+
   base: '/', // 路径基址 router index中history: createWebHistory(import.meta.env.BASE_URL),
   resolve: {
     alias: {

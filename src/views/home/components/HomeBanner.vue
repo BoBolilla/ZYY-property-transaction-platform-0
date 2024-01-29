@@ -1,31 +1,34 @@
-<script setup></script>
+<script setup>
+import { getBannerAPI } from '@/api/home'
+import { onMounted, ref } from 'vue'
+
+const bannerList = ref([])
+
+const getBanner = async () => {
+  const res = await getBannerAPI()
+  console.log(res)
+  bannerList.value = res.data.data.list
+  console.log(bannerList.value)
+}
+
+onMounted(() => getBanner())
+</script>
 
 <template>
-  <el-carousel :interval="5000">
-    <el-carousel-item v-for="item in 4" :key="item">
-      <h3 text="2xl" justify="center">{{ item }}</h3>
-    </el-carousel-item>
-  </el-carousel>
+  <div class="home-banner">
+    <el-carousel height="500px">
+      <el-carousel-item v-for="item in bannerList" :key="item.id">
+        <img :src="item.systemUrl" alt="" />
+      </el-carousel-item>
+    </el-carousel>
+  </div>
 </template>
 
-<style scoped>
-.el-carousel {
-  margin: 0;
-  padding: 0;
-}
-.el-carousel__item h3 {
-  color: #475669;
-  opacity: 0.75;
-  line-height: 300px;
-  margin: 0;
-  text-align: center;
-}
-
-.el-carousel__item:nth-child(2n) {
-  background-color: #e46841;
-}
-
-.el-carousel__item:nth-child(2n + 1) {
-  background-color: #e46741e9;
+<style scoped lang="scss">
+.home-banner {
+  img {
+    width: 100%;
+    height: 500px;
+  }
 }
 </style>

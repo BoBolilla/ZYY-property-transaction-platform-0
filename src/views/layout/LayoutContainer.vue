@@ -10,6 +10,7 @@ import LayoutFooter from './components/LayoutFooter.vue'
         <LayoutHeader />
       </el-header>
       <!-- 顶栏 -->
+
       <el-main class="main"><router-view></router-view></el-main>
       <!-- 二级路由出口 -->
 

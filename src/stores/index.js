@@ -6,4 +6,6 @@ pinia.use(piniaPluginPersistedstate)
 
 export default pinia
 
-export * from './modules/user' //导出user里面的所有按需导出
+export * from './modules/news' //导出user里面的所有按需导出
+
+// import { useNewsStore } from '@/stores'

@@ -4,7 +4,7 @@ import NewsCurrentLeft from '@/views/news/component/NewsCurrentLeft.vue'
 
 import { getNewsAPI } from '@/api/news.js'
 // eslint-disable-next-line no-unused-vars
-const currentNews = ref([])
+const currentNewsList = ref([])
 const getCurrentNews = async () => {
   const res = await getNewsAPI()
   // this.articleFunctionTag,
@@ -12,8 +12,8 @@ const getCurrentNews = async () => {
   // this.pageNum,
   // this.pageSize
   //console.log(res.data.data.list)
-  currentNews.value = res.data.data.list
-  console.log(currentNews.value)
+  currentNewsList.value = res.data.data.list
+  console.log(currentNewsList.value)
 }
 onMounted(() => getCurrentNews())
 </script>
@@ -27,7 +27,7 @@ onMounted(() => getCurrentNews())
         :md="12"
         :lg="12"
         :xl="12"
-        v-for="good in currentNews"
+        v-for="good in currentNewsList"
         :key="good.id"
       >
         <li class="li">

@@ -5,7 +5,7 @@ import NewsRightTop from '@/views/news/component/NewsRightTop.vue'
 import NewsRightBottom from '@/views/news/component/NewsRightBottom.vue'
 import { getNewsAPI } from '@/api/news.js'
 // eslint-disable-next-line no-unused-vars
-const currentNews = ref([])
+const currentNewsList = ref([])
 const getCurrentNews = async () => {
   const res = await getNewsAPI()
   // this.articleFunctionTag,
@@ -13,12 +13,12 @@ const getCurrentNews = async () => {
   // this.pageNum,
   // this.pageSize
   //console.log(res.data.data.list)
-  currentNews.value = res.data.data.list
-  //console.log(currentNews.value)
-  //console.log(currentNews.value[0])
+  currentNewsList.value = res.data.data.list
+  //console.log(currentNewsList.value)
+  //console.log(currentNewsList.value[0])
 }
 onMounted(() => getCurrentNews())
-// let { articleCover } = toRef(currentNews.value[0], 'articleCover')
+// let { articleCover } = toRef(currentNewsList.value[0], 'articleCover')
 </script>
 
 <template>
@@ -36,13 +36,13 @@ onMounted(() => getCurrentNews())
       </strong>
     </RouterLink>
     <ul class="news-list">
-      <li v-for="good in currentNews" :key="good.id" class="li">
+      <li v-for="good in currentNewsList" :key="good.id" class="li">
         <NewsRightTop :good="good"></NewsRightTop>
         <NewsRightTop :good="good"></NewsRightTop>
       </li>
     </ul>
     <ul class="news-list" style="margin-top: 50px">
-      <li v-for="good in currentNews" :key="good.id" class="li">
+      <li v-for="good in currentNewsList" :key="good.id" class="li">
         <NewsRightBottom :good="good"></NewsRightBottom>
       </li>
     </ul>

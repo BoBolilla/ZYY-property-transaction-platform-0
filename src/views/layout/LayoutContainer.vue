@@ -31,7 +31,8 @@ onMounted(() => {
 </template>
 
 <style lang="scss" scoped>
-.layout-container .container-top {
+.layout-container {
+  background-color: white;
   margin: 0;
   padding: 0;
 }

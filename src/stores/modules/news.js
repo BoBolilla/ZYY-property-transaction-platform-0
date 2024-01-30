@@ -5,7 +5,7 @@ import { getNewsAPI } from '@/api/news.js'
 export const useNewsStore = defineStore(
   'news',
   () => {
-    const currentNews = ref([])
+    const currentNewsList = ref([])
     const getCurrentNews = async () => {
       const res = await getNewsAPI()
       // this.articleFunctionTag,
@@ -13,11 +13,11 @@ export const useNewsStore = defineStore(
       // this.pageNum,
       // this.pageSize
       //console.log(res.data.data.list)
-      currentNews.value = res.data.data.list
-      console.log(currentNews.value)
+      currentNewsList.value = res.data.data.list
+      console.log(currentNewsList.value)
     }
     return {
-      currentNews,
+      currentNewsList,
       getCurrentNews
     }
   },

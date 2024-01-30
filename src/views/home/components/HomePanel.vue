@@ -19,6 +19,7 @@ defineProps({
       <!-- 主体内容区域 -->
       <slot name="main" />
     </div>
+    <hr />
   </div>
 </template>
 

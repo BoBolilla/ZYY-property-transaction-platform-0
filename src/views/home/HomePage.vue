@@ -11,9 +11,9 @@ import HomeCooperation from './components/HomeCooperation.vue'
   <div class="container">
     <HomeBanner />
   </div>
-  <el-row :gutter="20">
-    <el-col :span="5"><div class="grid-content ep-bg-purple" /></el-col>
-    <el-col :span="14"
+  <el-row>
+    <el-col :span="3"><div class="grid-content ep-bg-purple" /></el-col>
+    <el-col :span="18"
       ><div class="grid-content ep-bg-purple" />
 
       <HomeNews />
@@ -22,6 +22,6 @@ import HomeCooperation from './components/HomeCooperation.vue'
       <HomeOrganization />
       <HomeCooperation />
     </el-col>
-    <el-col :span="5"><div class="grid-content ep-bg-purple" /></el-col>
+    <el-col :span="3"><div class="grid-content ep-bg-purple" /></el-col>
   </el-row>
 </template>

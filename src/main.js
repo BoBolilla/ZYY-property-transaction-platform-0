@@ -10,11 +10,6 @@ import router from './router'
 
 import '@/styles/common.scss'
 
-import { getCategory } from '@/api/testAPI'
-getCategory().then((res) => {
-  console.log(res)
-})
-
 const app = createApp(App)
 
 app.use(pinia)

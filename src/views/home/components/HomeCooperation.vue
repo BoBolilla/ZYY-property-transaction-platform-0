@@ -28,7 +28,8 @@ import homePanel from './HomePanel.vue'
   height: 426px;
 
   li {
-    width: 306px;
+    width: 25%;
+    padding-right: 5%;
     height: 406px;
     transition: all 0.5s;
 
@@ -38,7 +39,7 @@ import homePanel from './HomePanel.vue'
     }
 
     img {
-      width: 306px;
+      width: 100%;
       height: 200px;
     }
 

@@ -1,16 +1,17 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import NewsCurrentLeft from '@/views/news/component/NewsCurrentLeft.vue'
-import { getNews } from '@/api/news.js'
+
+import { getNewsAPI } from '@/api/news.js'
 // eslint-disable-next-line no-unused-vars
 const currentNews = ref([])
 const getCurrentNews = async () => {
-  const res = await getNews()
+  const res = await getNewsAPI()
   // this.articleFunctionTag,
   // this.articleStatus,
   // this.pageNum,
   // this.pageSize
-  console.log(res.data.data.list)
+  //console.log(res.data.data.list)
   currentNews.value = res.data.data.list
   console.log(currentNews.value)
 }

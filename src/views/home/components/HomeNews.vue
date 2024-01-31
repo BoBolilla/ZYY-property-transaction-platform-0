@@ -19,8 +19,9 @@ const newsStore = useNewsStore()
                 >
                   <div class="news-banner">
                     <img :src="item.articleCover" alt="" />
+                    <h3>{{ item.articleTitle }}</h3>
                   </div>
-                  <h3>{{ item.articleTitle }}</h3>
+
                   <!-- <h3>
                     高质量技术要素市场建设暨上海技术交易所成立30周年大会顺利举行高质量技术要素市场建设暨上海技术交易所成立30周年大会顺利举行高质量技术要素市场建设暨上海技术交易所成立30周年大会顺利举行
                   </h3> -->

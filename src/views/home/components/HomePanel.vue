@@ -25,6 +25,7 @@ defineProps({
 
 <style scoped lang="scss">
 .home-panel {
+  margin: 5%;
   background-color: #fff;
 
   .head {

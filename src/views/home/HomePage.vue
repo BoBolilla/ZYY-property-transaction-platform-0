@@ -16,9 +16,9 @@ import HomeCooperation from './components/HomeCooperation.vue'
     <el-col :span="18"
       ><div class="grid-content ep-bg-purple" />
 
+      <HomeAchievement />
       <HomeNews />
       <HomeWork />
-      <HomeAchievement />
       <HomeOrganization />
       <HomeCooperation />
     </el-col>

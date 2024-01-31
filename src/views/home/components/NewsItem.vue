@@ -10,7 +10,7 @@ defineProps({
 <template>
   <RouterLink :to="`/newsDetail/${news.id}`" class="news-item">
     <p class="name ellipsis">{{ news.articleTitle }}</p>
-    <p class="desc ellipsis">{{ news.modifyDate }}</p>
+    <p class="date ellipsis">{{ news.modifyDate }}</p>
     <hr />
   </RouterLink>
 </template>
@@ -38,7 +38,7 @@ defineProps({
     font-size: 16px;
   }
 
-  .desc {
+  .date {
     color: #999;
     height: 29px;
   }

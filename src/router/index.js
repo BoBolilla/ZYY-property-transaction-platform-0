@@ -32,6 +32,10 @@ const router = createRouter({
           ]
         },
         {
+          path: '/newsDetail/:id', // 新闻详情页
+          component: () => import('@/views/news/NewsDetail.vue')
+        },
+        {
           path: '/organization', // 机构页
           component: () => import('@/views/organization/OrganizationPage.vue'),
           redirect: '/organization/history',

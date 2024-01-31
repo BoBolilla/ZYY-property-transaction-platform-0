@@ -8,7 +8,7 @@ defineProps({
 </script>
 
 <template>
-  <RouterLink to="/" class="news-item">
+  <RouterLink :to="`/newsDetail/${news.id}`" class="news-item">
     <p class="name ellipsis">{{ news.articleTitle }}</p>
     <p class="desc ellipsis">{{ news.modifyDate }}</p>
     <hr />

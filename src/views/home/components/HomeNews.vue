@@ -30,6 +30,9 @@ const newsStore = useNewsStore()
             </div></el-col
           >
           <el-col :span="12">
+            <div class="title-right">
+              <RouterLink :to="`/news`" class="arrow">+更多</RouterLink>
+            </div>
             <ul class="news-list">
               <li v-for="news in newsStore.currentNewsList" :key="news">
                 <NewsItem :news="news"></NewsItem>
@@ -83,5 +86,26 @@ const newsStore = useNewsStore()
   white-space: nowrap; /* 强制文本在一行内显示，避免换行 */
   // max-width: 100%; /* 限制文本宽度不超过父容器的宽度 */
   max-width: 100%;
+}
+
+.title-right {
+  height: 35px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  border-left: 6px solid #e46841;
+  background-color: #ecf5ff;
+}
+.arrow {
+  font-size: 20px;
+  color: gray;
+  font-weight: bold;
+  margin-right: 3%;
+
+  &:hover {
+    // transform: translate3d(0, -3px, 0);
+    // box-shadow: 0 3px 8px rgb(0 0 0 / 20%);
+    color: #e46841;
+  }
 }
 </style>

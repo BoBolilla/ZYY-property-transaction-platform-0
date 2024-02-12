@@ -12,8 +12,8 @@ import HomeCooperation from './components/HomeCooperation.vue'
     <HomeBanner />
   </div>
   <el-row>
-    <el-col :span="3"><div class="grid-content ep-bg-purple" /></el-col>
-    <el-col :span="18"
+    <el-col :span="2"><div class="grid-content ep-bg-purple" /></el-col>
+    <el-col :span="20"
       ><div class="grid-content ep-bg-purple" />
 
       <HomeAchievement />
@@ -22,7 +22,8 @@ import HomeCooperation from './components/HomeCooperation.vue'
       <HomeOrganization />
       <HomeCooperation />
       <HomeWork />
+      <img src="@\assets\images\bottom.png" alt="" />
     </el-col>
-    <el-col :span="3"><div class="grid-content ep-bg-purple" /></el-col>
+    <el-col :span="2"><div class="grid-content ep-bg-purple" /></el-col>
   </el-row>
 </template>

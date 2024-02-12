@@ -8,9 +8,6 @@ import { Search } from '@element-plus/icons-vue'
     class="el-menu"
     mode="horizontal"
     :ellipsis="false"
-    background-color="#FFFEFE"
-    text-color="#606266"
-    active-text-color="#E46841"
     @select="handleSelect"
     router
   >

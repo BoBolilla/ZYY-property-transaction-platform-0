@@ -1,7 +1,7 @@
 <template>
   <footer class="app_footer">
     <!-- 联系我们 -->
-    <div class="contact">
+    <!-- <div class="contact">
       <div class="container">
         <dl>
           <dt>客户服务</dt>
@@ -29,22 +29,22 @@
           </dd>
         </dl>
       </div>
-    </div>
+    </div> -->
     <!-- 其它 -->
     <div class="extra">
       <div class="container">
         <div class="slogan">
           <a href="javascript:;">
             <i class="iconfont icon-footer01"></i>
-            <span>价格亲民</span>
+            <span>关于我们</span>
           </a>
           <a href="javascript:;">
             <i class="iconfont icon-footer02"></i>
-            <span>物流快捷</span>
+            <span>联系我们</span>
           </a>
           <a href="javascript:;">
             <i class="iconfont icon-footer03"></i>
-            <span>品质新鲜</span>
+            <span>使用教程 </span>
           </a>
         </div>
         <!-- 版权信息 -->
@@ -58,7 +58,7 @@
             <a href="javascript:;">搜索推荐</a>
             <a href="javascript:;">友情链接</a>
           </p>
-          <p>CopyRight © 小兔鲜儿</p>
+          <p>CopyRight © 中医药产权交易平台有限公司</p>
         </div>
       </div>
     </div>

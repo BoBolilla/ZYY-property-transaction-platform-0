@@ -32,7 +32,7 @@ h2 {
 }
 
 .content {
-  text-indent: 5%;
+  text-indent: 2em;
   text-align: justify;
   line-height: 2;
 }

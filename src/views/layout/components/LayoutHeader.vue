@@ -5,13 +5,12 @@ import { Search } from '@element-plus/icons-vue'
 <template>
   <el-menu
     :default-active="$route.path"
-    class="el-menu"
+    class="nav"
     mode="horizontal"
     :ellipsis="false"
     @select="handleSelect"
     router
   >
-    <div class="flex-grow" />
     <el-menu-item index="/home">首页</el-menu-item>
     <el-sub-menu index="/news">
       <template #title>新闻</template>
@@ -31,18 +30,21 @@ import { Search } from '@element-plus/icons-vue'
       <el-menu-item index="/feedback/submit">意见提交</el-menu-item>
       <el-menu-item index="/feedback/release">处理公示</el-menu-item>
     </el-sub-menu>
-    <div class="flex-grow1" />
 
-    <div class="logo">
-      <img style="width: 190px" src="@/assets/images/ZYY-logo.png" alt="logo" />
+    <div class="logo" title="中医药知识产权交易平台">
+      <h1>
+        <RouterLink class="link" :to="`/home`"
+          >中医药知识产权交易平台</RouterLink
+        >
+      </h1>
     </div>
 
-    <div class="flex-grow2" />
+    <div class="flex-grow" />
     <el-menu-item index="/transaction">交易大厅</el-menu-item>
     <div class="search">
       <el-input
         v-model="input3"
-        placeholder="Please input"
+        placeholder="请输入内容"
         class="input-with-select"
       >
         <template #append>
@@ -54,13 +56,24 @@ import { Search } from '@element-plus/icons-vue'
 </template>
 
 <style scoped lang="scss">
-.search {
-  margin: 13px;
-}
-
 .logo {
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
+  width: 200px;
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  margin: 0 -100px;
+  background-size: cover;
+  background: url(@/assets/images/logo.png) no-repeat;
+}
+.logo .link {
+  display: block;
+  font-size: 0;
+}
+.flex-grow {
+  flex-grow: 1;
+}
+.search {
+  margin: auto;
+  margin-right: 10px;
 }
 </style>

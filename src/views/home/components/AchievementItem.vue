@@ -17,6 +17,7 @@
   height: 150px;
   border-radius: 20px;
   align-items: center;
+  color: #606266;
 }
 
 .content {

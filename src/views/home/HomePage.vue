@@ -41,8 +41,8 @@ import HomeCooperation from './components/HomeCooperation.vue'
 <style scoped>
 .show {
   position: absolute;
-  top: 510px;
-  left: 821px;
+  top: 35vw;
+  left: 55vw;
   width: 500px;
   height: 250px;
   color: white;

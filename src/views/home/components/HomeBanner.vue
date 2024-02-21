@@ -16,19 +16,27 @@ onMounted(() => getBanner())
 
 <template>
   <div class="home-banner">
-    <el-carousel height="500px">
-      <el-carousel-item v-for="item in bannerList" :key="item.id">
+    <el-carousel height="auto" autoplay>
+      <el-carousel-item
+        style="height: 35vw"
+        v-for="item in bannerList"
+        :key="item.id"
+      >
         <img :src="item.systemUrl" alt="" />
       </el-carousel-item>
     </el-carousel>
   </div>
 </template>
 
-<style scoped lang="scss">
+<style scoped>
 .home-banner {
-  img {
-    width: 100%;
-    height: 500px;
-  }
+  width: 100%;
+  height: 35vw;
+  background-color: pink;
+}
+
+img {
+  width: 100%;
+  height: 100%;
 }
 </style>

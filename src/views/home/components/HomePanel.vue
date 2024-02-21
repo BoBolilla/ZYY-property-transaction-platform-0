@@ -19,13 +19,11 @@ defineProps({
       <!-- 主体内容区域 -->
       <slot name="main" />
     </div>
-    <hr />
   </div>
 </template>
 
 <style scoped lang="scss">
 .home-panel {
-  margin: 5%;
   background-color: #fff;
 
   .head {

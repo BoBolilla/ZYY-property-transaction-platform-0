@@ -4,7 +4,7 @@ import WorkItem from './WorkItem.vue'
 </script>
 
 <template>
-  <div>
+  <div class="w">
     <homePanel title="业务模块">
       <template #main>
         <div class="container">

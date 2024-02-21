@@ -22,6 +22,6 @@ import achievementItem from './achievementItem.vue'
 
 .ach {
   height: 300px;
-  width: 540px;
+  width: 640px;
 }
 </style>

@@ -35,7 +35,6 @@ import HomeCooperation from './components/HomeCooperation.vue'
   <HomeOrganization />
   <HomeCooperation />
   <HomeWork />
-  <img src="@\assets\images\bottom.png" alt="" />
 </template>
 
 <style scoped>

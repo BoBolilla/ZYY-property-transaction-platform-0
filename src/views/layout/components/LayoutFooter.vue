@@ -66,7 +66,7 @@ img {
 }
 .content {
   float: left;
-  width: 600px;
+  width: 800px;
   height: 200px;
   border-bottom: white solid 1px;
 }
@@ -74,7 +74,7 @@ img {
 .contact,
 .using {
   float: left;
-  width: 200px;
+  width: 266.66px;
   height: 200px;
   padding: 10px;
 }

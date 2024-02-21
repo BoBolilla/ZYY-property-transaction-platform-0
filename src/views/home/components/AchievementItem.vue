@@ -12,7 +12,7 @@
 <style scoped lang="scss">
 .achievement {
   float: left;
-  margin-right: 30px;
+  margin-right: 50px;
   width: 150px;
   height: 150px;
   border-radius: 20px;

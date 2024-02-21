@@ -1,54 +1,102 @@
 <script setup>
-import homePanel from './HomePanel.vue'
 import NewsItem from './NewsItem.vue'
 import { useNewsStore } from '@/stores'
 const newsStore = useNewsStore()
 </script>
 
 <template>
-  <div>
-    <homePanel title="时事新闻">
-      <template #main>
-        <el-row :gutter="20">
-          <el-col :span="12"
-            ><div class="banner">
-              <el-carousel :interval="5000">
-                <el-carousel-item
-                  v-for="item in newsStore.currentNewsList"
-                  :key="item.id"
-                >
-                  <!-- <div class="news-banner"> -->
-                  <img :src="item.articleCover" alt="" />
-                  <h3>{{ item.articleTitle }}</h3>
-                  <!-- </div> -->
-
-                  <!-- <h3>
+  <div class="container w">
+    <div class="left">
+      <div class="title">
+        <h3>时事新闻</h3>
+        <RouterLink :to="`/news`" class="arrow">></RouterLink>
+      </div>
+      <div class="content-left">
+        <el-carousel :interval="5000">
+          <el-carousel-item
+            v-for="item in newsStore.currentNewsList"
+            :key="item.id"
+          >
+            <img :src="item.articleCover" alt="" />
+            <div class="newstitle-left">
+              <h3 class="ellipsis">{{ item.articleTitle }}</h3>
+            </div>
+            <!-- <h3>
                     高质量技术要素市场建设暨上海技术交易所成立30周年大会顺利举行高质量技术要素市场建设暨上海技术交易所成立30周年大会顺利举行高质量技术要素市场建设暨上海技术交易所成立30周年大会顺利举行
                   </h3> -->
-                </el-carousel-item>
-              </el-carousel>
-            </div></el-col
-          >
-          <el-col :span="12">
-            <div class="title-right">
-              <RouterLink :to="`/news`" class="arrow">+更多</RouterLink>
-            </div>
-            <ul class="news-list">
-              <li v-for="news in newsStore.currentNewsList" :key="news">
-                <NewsItem :news="news"></NewsItem>
-              </li>
-            </ul>
-          </el-col>
-        </el-row>
-      </template>
-    </homePanel>
+          </el-carousel-item>
+        </el-carousel>
+      </div>
+    </div>
+    <div class="right">
+      <div class="title">
+        <h3>通知公告</h3>
+        <RouterLink :to="`/`" class="arrow">></RouterLink>
+      </div>
+      <div class="content-right">
+        <ul class="news-list">
+          <li v-for="news in newsStore.currentNewsList" :key="news">
+            <NewsItem :news="news"></NewsItem>
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
 </template>
 
 <style scoped lang="scss">
-.banner {
+.container {
+  height: 350px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+
+  .left {
+    float: left;
+    width: 570px;
+    height: 350px;
+    margin-right: 60px;
+    background-color: grey;
+  }
+  .right {
+    float: left;
+    width: 490px;
+    height: 350px;
+  }
+}
+
+.title {
+  width: 570px;
+  height: 50px;
+  border-left: #e46841 solid 3px;
+  background-color: #ecf5ff;
+}
+.title h3 {
+  float: left;
+  margin: 13px;
+}
+
+.title .arrow {
+  float: right;
+  margin: 10px;
+}
+img {
+  width: 100%;
+  height: 100%;
+}
+.content-left {
   position: relative;
-  // height: 100%;
+}
+.newstitle-left {
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  width: 570px;
+  height: 60px;
+  background-color: rgb(0, 0, 0, 0.5);
+  color: white;
+}
+.newstitle-left h3 {
+  margin: 10px;
 }
 .banner:hover {
   cursor: pointer;

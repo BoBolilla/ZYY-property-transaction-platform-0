@@ -3,7 +3,7 @@ import homePanel from './HomePanel.vue'
 </script>
 
 <template>
-  <div>
+  <div class="container w">
     <homePanel title="机构信息">
       <template #main>
         <el-row :gutter="30">
@@ -27,6 +27,10 @@ import homePanel from './HomePanel.vue'
 </template>
 
 <style scoped lang="scss">
+.container {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
 h2 {
   text-align: center;
 }

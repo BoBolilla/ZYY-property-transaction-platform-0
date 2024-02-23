@@ -38,7 +38,6 @@ onMounted(() => getCurrentNews())
     <ul class="news-list">
       <li v-for="good in currentNewsList" :key="good.id" class="li">
         <NewsRightTop :good="good"></NewsRightTop>
-        <NewsRightTop :good="good"></NewsRightTop>
       </li>
     </ul>
     <ul class="news-list" style="margin-top: 50px">
@@ -101,7 +100,11 @@ h2 {
       color: #fff;
       font-weight: normal;
       transform: translate3d(0, -50%, 0);
-
+      :hover {
+        &:first-child {
+          color: #b46741;
+        }
+      }
       p {
         width: 100%;
         text-align: center;
@@ -116,6 +119,7 @@ h2 {
           //margin-top: 30px;
           flex: 1;
           background: rgba(0, 0, 0, 0.7);
+          font-size: 15px;
         }
       }
     }

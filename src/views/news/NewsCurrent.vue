@@ -1,21 +1,31 @@
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref } from 'vue'
 import NewsCurrentLeft from '@/views/news/component/NewsCurrentLeft.vue'
 
 import { getNewsAPI } from '@/api/news.js'
 // eslint-disable-next-line no-unused-vars
 const currentNewsList = ref([])
-const getCurrentNews = async () => {
-  const res = await getNewsAPI()
-  // this.articleFunctionTag,
-  // this.articleStatus,
-  // this.pageNum,
-  // this.pageSize
-  //console.log(res.data.data.list)
-  currentNewsList.value = res.data.data.list
-  console.log(currentNewsList.value)
+
+const currentPage = ref(1)
+const total = ref(0)
+const limit = ref(4)
+
+function getData(p = null) {
+  if (typeof p == 'number') {
+    currentPage.value = p
+    console.log(p)
+  }
+  const getCurrentNews = async () => {
+    const res = await getNewsAPI(currentPage.value)
+    total.value = res.data.data.total
+    currentNewsList.value = res.data.data.list
+    // console.log(currentNewsList.value)
+  }
+  // onMounted(() => getCurrentNews())
+  getCurrentNews()
 }
-onMounted(() => getCurrentNews())
+
+getData(1)
 </script>
 
 <template>
@@ -32,14 +42,21 @@ onMounted(() => getCurrentNews())
       >
         <li class="li">
           <NewsCurrentLeft :good="good"></NewsCurrentLeft>
-          <NewsCurrentLeft :good="good"></NewsCurrentLeft>
+          <!--          <NewsCurrentLeft :good="good"></NewsCurrentLeft>-->
         </li>
         <div class="grid-content ep-bg-purple-light" />
       </el-col>
     </el-row>
   </ul>
   <div class="end">
-    <el-pagination background layout="prev, pager, next" :total="1000" />
+    <el-pagination
+      background
+      layout="prev, pager, next"
+      :total="total"
+      :current-page="currentPage"
+      :page-size="limit"
+      @current-change="getData"
+    />
   </div>
 </template>
 

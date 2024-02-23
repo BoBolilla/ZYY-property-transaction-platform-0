@@ -11,16 +11,17 @@
 
 <style scoped lang="scss">
 .work {
-  width: 150px;
+  width: 200px;
+  color: rgb(99, 75, 157);
   height: 150px;
-  border-radius: 20px;
-  border-style: dashed;
-  border-color: #e46841;
+  border: 1px solid #c1bfbf;
+  border-radius: 10px;
   display: flex;
   align-items: center;
 }
 
 .content {
+  padding: 20px;
   text-align: center;
 }
 </style>

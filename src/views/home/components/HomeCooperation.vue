@@ -12,9 +12,10 @@ import homePanel from './HomePanel.vue'
               <RouterLink to="/">
                 <img src="@/assets/images/test.png" alt="" />
 
-                <p class="name ellipsis-2">
+                <h4 class="name ellipsis-2">
                   高质量技术要素市场建设暨上海技术交易所成立30周年大会顺利举行
-                </p>
+                </h4>
+                <RouterLink class="link" to="/">查看更多>></RouterLink>
                 <p class="desc">2024年1月1日</p>
               </RouterLink>
             </div>
@@ -27,17 +28,23 @@ import homePanel from './HomePanel.vue'
 <style scoped lang="scss">
 .goods-list {
   justify-content: space-between;
-  height: 400px;
+  height: 500px;
   width: 1240px;
-  .li-cotent {
+
+  .li-cotent h4 {
+    width: 210px;
+    height: 40px;
+    font-weight: 5px;
+    margin: 30px;
   }
   li {
     float: left;
     width: 270px;
     margin-right: 40px;
     // padding-right: 5%;
-    height: 350px;
+    height: 400px;
     transition: all 0.5s;
+    box-shadow: 0 3px 8px rgb(0 0 0 / 20%);
 
     &:hover {
       transform: translate3d(0, -3px, 0);
@@ -49,14 +56,19 @@ import homePanel from './HomePanel.vue'
       height: 180px;
     }
 
-    p {
-      font-size: 20px;
-      padding-top: 20px;
+    .link {
+      display: block;
+      font-size: 10px;
+      margin-left: 30px;
+      margin-top: 90px;
     }
 
     .desc {
+      margin-top: 10px;
+      padding: 10px 30px;
       color: #999;
-      font-size: 18px;
+      font-size: 10px;
+      border-top: 1px solid #999;
     }
   }
 }

@@ -35,7 +35,13 @@ h2 {
   text-align: center;
 }
 
+img {
+  width: 570px;
+  height: 350px;
+}
 .content {
+  width: 570px;
+  height: 350px;
   text-indent: 2em;
   text-align: justify;
   line-height: 2;

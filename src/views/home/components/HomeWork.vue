@@ -24,6 +24,7 @@ import WorkItem from './WorkItem.vue'
   flex-wrap: wrap;
   //展开铺满，justify-content:center;则代表居中
   justify-content: center;
+  margin-bottom: 100px;
 }
 
 .content {

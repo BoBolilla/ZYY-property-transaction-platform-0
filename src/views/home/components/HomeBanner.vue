@@ -32,7 +32,6 @@ onMounted(() => getBanner())
 .home-banner {
   width: 100%;
   height: 35vw;
-  background-color: pink;
 }
 
 img {

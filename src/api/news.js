@@ -23,7 +23,7 @@ export const getNewsAPI = () => {
     params: {
       pageNum: 1,
       articleStatus: 1,
-      pageSize: 5,
+      pageSize: 6,
       articleFunctionTag: '实时新闻'
     }
   })

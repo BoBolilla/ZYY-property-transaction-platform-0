@@ -22,7 +22,7 @@ export const getNewsAPI = (pageNum) => {
   return httpInstance.get('/portal/article/selectArticlePage', {
     params: {
       pageNum,
-      pageSize: 4,
+      pageSize: 6,
       articleStatus: 1,
       articleFunctionTag: '实时新闻'
     }

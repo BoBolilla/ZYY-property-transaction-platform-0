@@ -8,7 +8,7 @@ const currentNewsList = ref([])
 
 const currentPage = ref(1)
 const total = ref(0)
-const limit = ref(4)
+const limit = ref(6)
 
 function getData(p = null) {
   if (typeof p == 'number') {
@@ -30,7 +30,7 @@ getData(1)
 
 <template>
   <ul class="news-list">
-    <el-row :gutter="10">
+    <el-row :gutter="20">
       <el-col
         :xs="12"
         :sm="12"
@@ -99,6 +99,5 @@ li {
   //width: 400px;
   //height: 300px;
   //margin-right: 10px;
-  margin-bottom: 10px;
 }
 </style>

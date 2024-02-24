@@ -12,21 +12,41 @@ import NewsHot from '@/views/news/NewsHot.vue'
 
 <template>
   <div class="newsCurrent">
+    <div><img src="../../assets/images/newsPageBG.png" alt="" /></div>
     <el-row :gutter="20">
       <el-col :xs="4" :sm="4" :md="4" :lg="4" :xl="4">
         <div class="grid-content ep-bg-purple" />
       </el-col>
-      <el-col :xs="12" :sm="12" :md="12" :lg="12" :xl="12">
+      <el-col
+        :xs="12"
+        :sm="12"
+        :md="12"
+        :lg="12"
+        :xl="12"
+        class="centerneirong"
+      >
         <el-menu
           :default-active="$route.path"
-          class="el-menu-demo"
+          class="el-menu-demo el-bgcolor"
           mode="horizontal"
           @select="handleSelect"
+          text-color="#fff"
+          active-text-color=" #6277c4"
           router
         >
-          <el-menu-item index="/news/current">时事新闻</el-menu-item>
-          <el-menu-item index="/news/work">工作状态</el-menu-item>
-          <el-menu-item index="/news/media">媒体发布</el-menu-item>
+          <div class="xiwnen">新闻中心</div>
+          <el-menu-item
+            index="/news/current"
+            class="el-bgc"
+            style="margin-left: 20px"
+            >时事新闻</el-menu-item
+          >
+          <el-menu-item index="/news/work" class="el-bgc"
+            >工作状态</el-menu-item
+          >
+          <el-menu-item index="/news/media" class="el-bgc"
+            >媒体发布</el-menu-item
+          >
         </el-menu>
         <div class="h-6" />
         <router-view></router-view>
@@ -74,5 +94,29 @@ li {
   height: 300px;
   margin-right: 10px;
   margin-bottom: 10px;
+}
+.centerneirong {
+  margin-top: -200px;
+}
+.el-bgcolor {
+  background-color: rgb(255, 223, 233, 0);
+  border-bottom: none;
+}
+.el-bgc {
+  width: auto !important;
+  background-color: rgb(255, 223, 233, 0) !important;
+  border-bottom: none !important;
+  font-size: 18px;
+}
+.el-bgc:hover {
+  color: #6277c4 !important;
+  border-bottom: none;
+  background-color: rgb(255, 223, 233, 0) !important;
+}
+
+.xiwnen {
+  color: #fff;
+  font-size: 32px;
+  margin-left: 20px;
 }
 </style>

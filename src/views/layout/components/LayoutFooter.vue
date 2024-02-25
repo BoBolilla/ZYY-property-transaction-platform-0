@@ -26,7 +26,9 @@
           </div>
         </div>
         <div class="net">
-          <img src="@/assets/images/net.png" />
+          <img src="@/assets/images/QQ.png" />
+          <img src="@/assets/images/weixin.png" />
+          <img src="@/assets/images/weibo.png" style="margin-left: 15px" />
         </div>
       </div>
       <div class="buttom">
@@ -101,4 +103,10 @@ h4 {
   display: inline-block;
   margin: 0 16px;
 }
+.net img {
+  margin-left: 8px;
+  width: 50px;
+  height: 50px;
+}
 </style>
+<script setup></script>

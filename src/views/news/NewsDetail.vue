@@ -1,4 +1,5 @@
 <script setup>
+import NewsHot from '@/views/news/NewsHot.vue'
 import { getNewsDetailAPI } from '@/api/news.js'
 import { useRoute } from 'vue-router'
 import { ref, onMounted } from 'vue'
@@ -23,7 +24,7 @@ onMounted(async () => {
     console.log('尝试')
     console.log(news.value.articleUrl)
     const response = await axios.get(decodeURIComponent(news.value.articleUrl))
-    article.value = response
+    article.value = response.data
     console.log('文章信息')
     console.log(article.value)
   } catch (error) {
@@ -43,7 +44,7 @@ onMounted(async () => {
           <div v-html="article"></div>
         </div>
       </div>
-      <div class="right"></div>
+      <div class="right"><news-hot></news-hot></div>
     </div>
   </div>
 </template>
@@ -99,9 +100,10 @@ onMounted(async () => {
   background-color: rgb(228, 104, 65);
 }
 .right {
+  margin-top: 180px;
+  margin-left: 30px;
   float: left;
-  width: 300px;
+  width: 270px;
   height: 100%;
-  background-color: rgb(81, 180, 230);
 }
 </style>

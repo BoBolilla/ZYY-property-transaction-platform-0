@@ -90,6 +90,7 @@ onMounted(async () => {
   padding: 40px;
   font-size: 18px;
   background-color: white;
+  box-shadow: 0 3px 8px rgb(0 0 0 / 20%);
 }
 .left .article .dec {
   position: absolute;

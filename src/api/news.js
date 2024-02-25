@@ -18,6 +18,14 @@
 // }
 import httpInstance from '@/utils/request'
 
+export const getNewsDetailAPI = (id) => {
+  return httpInstance.get('/portal/article/selectArticleById', {
+    params: {
+      id
+    }
+  })
+}
+
 export const getNewsAPI = (pageNum) => {
   return httpInstance.get('/portal/article/selectArticlePage', {
     params: {

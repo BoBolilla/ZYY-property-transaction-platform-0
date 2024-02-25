@@ -30,8 +30,8 @@ const newsStore = useNewsStore()
     </div>
     <div class="right">
       <div class="title">
-        <h3>通知公告</h3>
-        <RouterLink :to="`/`" class="arrow">></RouterLink>
+        <h3>时事新闻</h3>
+        <RouterLink :to="`/news`" class="arrow">></RouterLink>
       </div>
       <div class="content-right">
         <ul class="news-list">

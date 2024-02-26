@@ -4,14 +4,14 @@ import { onMounted, ref } from 'vue'
 import axios from 'axios'
 
 const props = defineProps({
-  good: {
+  news: {
     type: Object,
     default: () => {}
   }
 })
 
 let fileContent = ref()
-let articleUrl1 = ref(props.good.articleUrl)
+let articleUrl1 = ref(props.news.articleUrl)
 console.log(articleUrl1.value)
 onMounted(() => {
   // 发送HTTP请求获取文件内容
@@ -30,8 +30,8 @@ onMounted(() => {
 })
 </script>
 <template>
-  <RouterLink to="/" class="goods-item">
-    <el-image :src="good.articleCover" lazy />
+  <RouterLink :to="`/newsDetail/${news.id}`" class="goods-item">
+    <el-image :src="news.articleCover" lazy />
     <p class="name">
       明月几时有，把酒问青天，不知天上宫阙，今夕是何年，我欲乘风过去，油孔琼楼玉宇，明
     </p>

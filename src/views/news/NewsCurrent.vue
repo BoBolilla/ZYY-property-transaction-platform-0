@@ -37,11 +37,11 @@ getData(1)
         :md="12"
         :lg="12"
         :xl="12"
-        v-for="good in currentNewsList"
-        :key="good.id"
+        v-for="news in currentNewsList"
+        :key="news.id"
       >
         <li class="li">
-          <NewsCurrentLeft :good="good"></NewsCurrentLeft>
+          <NewsCurrentLeft :news="news"></NewsCurrentLeft>
           <!--          <NewsCurrentLeft :good="good"></NewsCurrentLeft>-->
         </li>
         <div class="grid-content ep-bg-purple-light" />

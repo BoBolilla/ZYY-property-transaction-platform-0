@@ -12,7 +12,13 @@ import NewsHot from '@/views/news/NewsHot.vue'
 
 <template>
   <div class="newsCurrent">
-    <div><img src="../../assets/images/newsPageBG.png" alt="" /></div>
+    <div>
+      <img
+        src="../../assets/images/newsPageBG.png"
+        alt=""
+        style="width: 100%"
+      />
+    </div>
     <el-row :gutter="20">
       <el-col :xs="4" :sm="4" :md="4" :lg="4" :xl="4">
         <div class="grid-content ep-bg-purple" />

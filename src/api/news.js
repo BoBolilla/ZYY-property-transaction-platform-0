@@ -32,7 +32,7 @@ export const getNewsAPI = (pageNum) => {
       pageNum,
       pageSize: 6,
       articleStatus: 1,
-      articleFunctionTag: '实时新闻'
+      articleFuncTag: '实时新闻'
     }
   })
 }

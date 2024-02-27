@@ -5,8 +5,8 @@ export const getBannerAPI = () => {
     params: {
       pageNum: 0,
       pageSize: 6,
-      systemFunctionTag: '轮播图',
-      systemResourceTag: '图片',
+      systemFuncTag: '轮播图',
+      systemResTag: '图片',
       systemStatus: 1
     }
   })

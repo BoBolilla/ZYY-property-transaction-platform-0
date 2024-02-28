@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia'
 import { ref } from 'vue'
-import { getNewsAPI } from '@/api/news.js'
+import { getHotNewsAPI, getImportNewsAPI, getNewsAPI } from '@/api/news.js'
 
 export const useNewsStore = defineStore(
   'news',
@@ -16,9 +16,25 @@ export const useNewsStore = defineStore(
       currentNewsList.value = res.data.data.list
       console.log(currentNewsList.value)
     }
+    const currentHotNewsList = ref([])
+    const getHotCurrentNews = async () => {
+      const res = await getHotNewsAPI()
+      currentHotNewsList.value = res.data.data.list
+      console.log(currentHotNewsList.value, 123456)
+    }
+    const currentImportNewsList = ref([])
+    const getImportCurrentNews = async () => {
+      const res = await getImportNewsAPI()
+      currentImportNewsList.value = res.data.data.list
+      console.log(currentImportNewsList.value, 123456)
+    }
     return {
       currentNewsList,
-      getCurrentNews
+      getCurrentNews,
+      currentHotNewsList,
+      getHotCurrentNews,
+      currentImportNewsList,
+      getImportCurrentNews
     }
   },
   {

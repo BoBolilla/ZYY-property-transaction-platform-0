@@ -1,6 +1,6 @@
 <script setup>
 defineProps({
-  good: {
+  news: {
     type: Object,
     default: () => {}
   }
@@ -8,12 +8,16 @@ defineProps({
 </script>
 
 <template>
-  <RouterLink to="/" class="goods-item">
-    <el-image :src="good.articleCover" lazy />
-    <!--    <img v-img-lazy="good.articleCover" alt=""  :src="good.articleCover"/>-->
+  <RouterLink
+    :to="`/newsDetail/${news.id}`"
+    :key="$route.fullPath"
+    class="goods-item"
+  >
+    <el-image :src="news.articleCoverUrl" lazy />
+    <!--    <img v-img-lazy="good.articleCoverUrl" alt=""  :src="good.articleCoverUrl"/>-->
     <div class="img-right">
-      <p class="name">高质量技术床前明月光疑是地上霜</p>
-      <p class="time">2023年12月10日</p>
+      <p class="name">{{ news.articleTitle }}</p>
+      <p class="time">{{ news.createDate }}</p>
     </div>
   </RouterLink>
 </template>

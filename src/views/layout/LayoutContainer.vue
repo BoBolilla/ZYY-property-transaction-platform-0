@@ -19,7 +19,7 @@ onMounted(() => {
     <!-- 顶栏 -->
 
     <!-- <el-main class="main"> -->
-    <router-view></router-view>
+    <router-view :key="$route.fullPath" />
     <!-- </el-main> -->
     <!-- 二级路由出口 -->
 

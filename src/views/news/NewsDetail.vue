@@ -23,7 +23,7 @@ onMounted(async () => {
   try {
     console.log('尝试')
     console.log(news.value.articleUrl)
-    const response = await axios.get(decodeURIComponent(news.value.articleUrl))
+    const response = await axios.get(news.value.articleUrl)
     article.value = response.data
     console.log('文章信息')
     console.log(article.value)

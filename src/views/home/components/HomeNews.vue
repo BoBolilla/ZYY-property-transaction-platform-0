@@ -17,7 +17,7 @@ const newsStore = useNewsStore()
             v-for="item in newsStore.currentNewsList"
             :key="item.id"
           >
-            <img :src="item.articleCover" alt="" />
+            <img :src="item.articleCoverUrl" alt="" />
             <div class="newstitle-left">
               <h3 class="ellipsis">{{ item.articleTitle }}</h3>
             </div>

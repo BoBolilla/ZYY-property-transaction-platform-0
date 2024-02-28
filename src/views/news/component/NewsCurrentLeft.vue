@@ -16,9 +16,7 @@ console.log(articleUrl1.value)
 onMounted(() => {
   // 发送HTTP请求获取文件内容
   axios
-    .get(
-      'https://zyychanquanjiaoyi.oss-cn-beijing.aliyuncs.com/2024/02/23/%E5%AE%9E%E6%97%B6%E6%96%B0%E9%97%BB/%E6%96%87%E7%AB%A0/81442bdc2b95434cbc4871ee657a1e0c?Expires=2024042466&OSSAccessKeyId=LTAI5t6LqCyho9Eb782DEvVG&Signature=1MbfmUTigY%2FXXZDhJ6PrDZGopiY%3D'
-    )
+    .get(articleUrl1.value)
     .then((response) => {
       fileContent.value = response.data
     })
@@ -31,9 +29,9 @@ onMounted(() => {
 </script>
 <template>
   <RouterLink :to="`/newsDetail/${news.id}`" class="goods-item">
-    <el-image :src="news.articleCover" lazy />
+    <el-image :src="news.articleCoverUrl" lazy />
     <p class="name">
-      明月几时有，把酒问青天，不知天上宫阙，今夕是何年，我欲乘风过去，油孔琼楼玉宇，明
+      {{ news.articleTitle }}
     </p>
     <p class="desc" v-html="fileContent"></p>
     <!--    <el-image :src="good.articleUrl" lazy/>-->
@@ -49,7 +47,7 @@ onMounted(() => {
     >
       更多>>
     </p>
-    <p class="time">2023年12月10日</p>
+    <p class="time">{{ news.createDate }}</p>
   </RouterLink>
   <!--  <div class="grid-content ep-bg-purple" />-->
 </template>

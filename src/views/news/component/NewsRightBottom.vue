@@ -2,7 +2,7 @@
 // import NewsHot from '@/views/news/NewsHot.vue'
 
 defineProps({
-  good: {
+  news: {
     type: Object,
     default: () => {}
   }
@@ -10,9 +10,13 @@ defineProps({
 </script>
 
 <template>
-  <RouterLink to="/" class="goods-item">
-    <el-image :src="good.articleCover" lazy />
-    <p class="name">高质量技术市场建设在上海技术交易所成的30周年大会春丽举行</p>
+  <RouterLink
+    :to="`/newsDetail/${news.id}`"
+    :key="$route.fullPath"
+    class="goods-item"
+  >
+    <el-image :src="news.articleCoverUrl" lazy />
+    <p class="name">{{ news.articleTitle }}</p>
     <!--    <p class="time">2023年12月10日</p>-->
   </RouterLink>
   <!--  <div class="grid-content ep-bg-purple" />-->

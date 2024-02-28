@@ -25,7 +25,7 @@ export const getNewsDetailAPI = (id) => {
     }
   })
 }
-
+//实时新闻查询
 export const getNewsAPI = (pageNum) => {
   return httpInstance.get('/portal/article/selectArticlePage', {
     params: {
@@ -33,6 +33,27 @@ export const getNewsAPI = (pageNum) => {
       pageSize: 6,
       articleStatus: 1,
       articleFuncTag: '实时新闻'
+    }
+  })
+}
+//热点新闻查询
+export const getHotNewsAPI = () => {
+  return httpInstance.get('/portal/article/selectArticlePage', {
+    params: {
+      pageNum: 1,
+      pageSize: 3,
+      articleStatus: 1,
+      articleFuncTag: '热点新闻'
+    }
+  })
+}
+export const getImportNewsAPI = () => {
+  return httpInstance.get('/portal/article/selectArticlePage', {
+    params: {
+      pageNum: 1,
+      pageSize: 3,
+      articleStatus: 1,
+      articleFuncTag: '重点新闻'
     }
   })
 }

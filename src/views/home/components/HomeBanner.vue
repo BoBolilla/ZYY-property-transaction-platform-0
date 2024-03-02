@@ -1,24 +1,17 @@
 <script setup>
-import { getBannerAPI } from '@/api/home'
-import { onMounted, ref } from 'vue'
-
-const bannerList = ref([])
-
-const getBanner = async () => {
-  const res = await getBannerAPI()
-  //console.log(res)
-  bannerList.value = res.data.data.list
-  console.log(bannerList.value)
-}
-
-onMounted(() => getBanner())
+defineProps({
+  bannerList: {
+    type: Object,
+    default: () => {}
+  }
+})
 </script>
 
 <template>
   <div class="home-banner">
     <el-carousel height="auto" autoplay>
       <el-carousel-item
-        style="height: 35vw"
+        style="height: 35vw; width: 100%"
         v-for="item in bannerList"
         :key="item.id"
       >

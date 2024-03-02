@@ -5,11 +5,26 @@ import HomeNews from './components/HomeNews.vue'
 import HomeWork from './components/HomeWork.vue'
 import HomeOrganization from './components/HomeOrganization.vue'
 import HomeCooperation from './components/HomeCooperation.vue'
+import { onMounted, ref } from 'vue'
+import { getBannerAPI } from '@/api/home.js'
+
+const bannerList = ref([])
+
+function getBanner() {
+  getBannerAPI().then((res) => {
+    bannerList.value = res.data.data.list
+    console.log(bannerList.value)
+  })
+}
+
+onMounted(() => {
+  getBanner()
+})
 </script>
 
 <template>
   <div class="container">
-    <HomeBanner />
+    <HomeBanner :bannerList="bannerList" />
   </div>
   <div class="show">
     <div class="yj">
@@ -46,10 +61,12 @@ import HomeCooperation from './components/HomeCooperation.vue'
   height: 250px;
   color: white;
 }
+
 .show img {
   margin: 10px;
   margin-top: 30px;
 }
+
 .show .yj {
   padding: 20px;
   float: left;
@@ -57,6 +74,7 @@ import HomeCooperation from './components/HomeCooperation.vue'
   height: 250px;
   background-color: #235db6;
 }
+
 .show .shim {
   padding: 20px;
   float: left;

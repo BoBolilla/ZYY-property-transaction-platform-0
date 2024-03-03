@@ -13,7 +13,7 @@ defineProps({
     :key="$route.fullPath"
     class="goods-item"
   >
-    <el-image :src="news.articleCoverUrl" lazy />
+    <el-image :src="news.articleCoverUrl" lazy style="width: 50%" />
     <!--    <img v-img-lazy="good.articleCoverUrl" alt=""  :src="good.articleCoverUrl"/>-->
     <div class="img-right">
       <p class="name">{{ news.articleTitle }}</p>
@@ -25,10 +25,8 @@ defineProps({
 <style scoped lang="scss">
 .goods-item {
   display: flex;
-  border-radius: 12px;
   text-align: center;
   height: 85px;
-  border: #999999 solid 1px;
   margin-top: 20px;
 
   &:hover {

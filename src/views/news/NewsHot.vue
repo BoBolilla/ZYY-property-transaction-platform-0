@@ -15,51 +15,51 @@ onMounted(() => {
 </script>
 
 <template>
-  <h2 style="margin-bottom: 15px">HOT NEWS</h2>
-  <div class="image">
-    <div v-for="(news, index) in newsStore.currentHotNewsList" :key="news.id">
-      <div v-if="index === 0">
-        <RouterLink class="cover" :to="`/newsDetail/${news.id}`">
-          <el-image :src="news.articleCoverUrl" lazy></el-image>
-          <strong class="label" v-if="index === 0">
-            <p>{{ news.articleTitle }}</p>
-            <p>{{ news.createDate }}</p>
-          </strong>
-        </RouterLink>
+  <div>
+    <h2 style="margin-top: 10px">HOT NEWS</h2>
+    <div class="image" style="margin-top: 25px">
+      <div v-for="(news, index) in newsStore.currentHotNewsList" :key="news.id">
+        <div v-if="index === 0">
+          <RouterLink class="cover" :to="`/newsDetail/${news.id}`">
+            <el-image :src="news.articleCoverUrl" lazy style="height: 15vw">
+            </el-image>
+            <strong class="label" v-if="index === 0">
+              <p>{{ news.articleTitle }}</p>
+              <p style="margin-top: 3vw; text-align: left">
+                {{ news.createDate }}
+              </p>
+            </strong>
+          </RouterLink>
+        </div>
       </div>
+      <ul class="news-list">
+        <li
+          v-for="news in newsStore.currentHotNewsList"
+          :key="news.id"
+          class="li"
+        >
+          <NewsRightTop :news="news"></NewsRightTop>
+        </li>
+      </ul>
+      <h2 style="margin-bottom: -30px; margin-top: 30px">Important NEWS</h2>
+      <ul class="news-list" style="margin-top: 50px">
+        <li
+          v-for="news in newsStore.currentImportNewsList"
+          :key="news.id"
+          class="li"
+        >
+          <NewsRightBottom :news="news"></NewsRightBottom>
+        </li>
+      </ul>
     </div>
-    <ul class="news-list">
-      <li
-        v-for="news in newsStore.currentHotNewsList"
-        :key="news.id"
-        class="li"
-      >
-        <NewsRightTop :news="news"></NewsRightTop>
-      </li>
-    </ul>
-    <h2 style="margin-bottom: -30px">Important NEWS</h2>
-    <ul class="news-list" style="margin-top: 50px">
-      <li
-        v-for="news in newsStore.currentImportNewsList"
-        :key="news.id"
-        class="li"
-      >
-        <NewsRightBottom :news="news"></NewsRightBottom>
-      </li>
-    </ul>
   </div>
 </template>
 
 <style scoped lang="scss">
-h2 {
-  margin-top: 20px;
-  margin-left: 35px;
-}
-
-.li {
-  margin-top: 20px;
-  width: 100%;
-  box-sizing: border-box;
+@media only screen and (max-width: 1600px) {
+  .label p:first {
+    font-size: 13px !important;
+  }
 }
 
 .news-list {
@@ -93,15 +93,16 @@ h2 {
     .label {
       position: absolute;
       left: 0;
-      bottom: 1%;
-      //padding: 2px;
+      bottom: 0;
       width: 100%;
+      //padding: 2px;WW
+      height: 8vw;
       //height: 66px;
       display: block;
       font-size: 18px;
       color: #fff;
-      font-weight: normal;
-      transform: translate3d(0, -50%, 0);
+      // transform: translate3d(0, -50%, 0);
+      background-color: rgb(235, 234, 234, 0.3);
 
       :hover {
         &:first-child {
@@ -110,19 +111,22 @@ h2 {
       }
 
       p {
-        width: 100%;
+        width: 90%;
+        margin: auto;
         text-align: center;
 
         &:first-child {
-          width: 100%;
-          background: rgb(16, 8, 8);
+          width: 90%;
+          text-align: center;
+          font-weight: 600;
         }
 
         &:last-child {
-          width: 100%;
+          width: 90%;
           //margin-top: 30px;
+          text-align: center;
+          font-weight: 400;
           flex: 1;
-          background: rgba(0, 0, 0, 0.7);
           font-size: 15px;
         }
       }

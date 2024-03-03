@@ -59,7 +59,7 @@ onMounted(() => {
   text-align: center;
   //height: 600px;
   border: #f5f5f5 solid 4px;
-  margin-top: 20px;
+  // margin-top: 20px;
 
   &:hover {
     transform: translate3d(0, -3px, 0);
@@ -91,6 +91,7 @@ onMounted(() => {
 
   .desc {
     font-size: 15px;
+    font-weight: 400 !important;
     color: #666666;
     width: 90%; /*要显示文字的宽度*/
     margin: auto;
@@ -106,7 +107,9 @@ onMounted(() => {
     text-overflow: ellipsis;
     word-break: break-all;
   }
-
+  .desc h3 {
+    font-weight: 400 !important;
+  }
   .time {
     box-sizing: border-box;
     text-align: left;

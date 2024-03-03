@@ -39,6 +39,7 @@ import NewsHot from '@/views/news/NewsHot.vue'
           text-color="#fff"
           active-text-color=" #6277c4"
           router
+          style="margin-bottom: 60px"
         >
           <div class="xiwnen">新闻中心</div>
           <el-menu-item

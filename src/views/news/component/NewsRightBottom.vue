@@ -28,7 +28,7 @@ defineProps({
   border-radius: 12px;
   text-align: center;
 
-  margin-top: 20px;
+  // margin-top: 20px;
 
   &:hover {
     transform: translate3d(0, -3px, 0);

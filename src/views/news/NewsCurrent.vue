@@ -82,7 +82,6 @@ el-col {
 }
 
 .li {
-  margin-top: 20px;
   width: 100%;
   box-sizing: border-box;
   display: inline-block;

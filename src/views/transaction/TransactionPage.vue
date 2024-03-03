@@ -1,7 +1,13 @@
 <script setup>
+import { useRouter } from 'vue-router'
 import { ref } from 'vue'
 import { ShoppingBag, Document } from '@element-plus/icons-vue'
 const input = ref('')
+
+const handleButtonClick = () => {
+  const router = useRouter()
+  router.push('/search') // 替换'/your-route'为您想要跳转的路由路径
+}
 </script>
 
 <template>
@@ -27,6 +33,7 @@ const input = ref('')
             font-size: 17px;
           "
           type="primary"
+          @click="handleButtonClick"
           >搜索专利</el-button
         >
         <p>计算机，松茸，生物医药，汽车</p>

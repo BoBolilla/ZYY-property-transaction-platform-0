@@ -47,6 +47,7 @@ onMounted(async () => {
       <div class="right"><news-hot></news-hot></div>
     </div>
   </div>
+  <a href="http://localhost:5173/newsDetail/307"> photo</a>
 </template>
 
 <style scoped>

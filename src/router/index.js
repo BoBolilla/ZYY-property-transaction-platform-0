@@ -80,6 +80,10 @@ const router = createRouter({
         {
           path: '/transaction', // 交易页
           component: () => import('@/views/transaction/TransactionPage.vue')
+        },
+        {
+          path: '/search', // 搜索
+          component: () => import('@/views/transaction/SearchPage.vue')
         }
       ]
     }

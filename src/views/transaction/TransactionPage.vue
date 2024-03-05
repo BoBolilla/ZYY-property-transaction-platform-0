@@ -31,6 +31,7 @@ const handleButtonClick = () => {
             width: 130px;
             height: 50px;
             font-size: 17px;
+            margin-left: 5px;
           "
           type="primary"
           @click="handleButtonClick"

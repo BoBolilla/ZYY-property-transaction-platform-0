@@ -11,6 +11,10 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 'latest'
   },
+  // parser: "vue-eslint-parser",
+  // parser: '@typescript-eslint/parser',
+  // plugins: ['@typescript-eslint'],
+
   rules: {
     // 前置：
     //1. 禁用格式化插件 prettier format on save 关闭

@@ -56,26 +56,16 @@ const tableData: User[] = [
     </div>
     <div class="banner">
       <div class="top">
-        <span
-          style="
-            margin-left: 30px;
-            margin-right: 20px;
-            color: #235db6 !important;
-          "
+        <el-menu
+          ellipsis
+          class="el-menu-popper-demo"
+          mode="horizontal"
+          :popper-offset="16"
+          style="max-width: 100%"
         >
-          <router-link to="" class="active">执业机构名称</router-link>
-        </span>
-
-        <span>|</span>
-        <span
-          style="
-            margin-left: 20px;
-            margin-right: 20px;
-            color: #235db6 !important;
-          "
-        >
-          <router-link to="" class="active">专业机构名称</router-link></span
-        >
+          <el-menu-item index="1">执业机构名称</el-menu-item>
+          <el-menu-item index="2">专业机构名称</el-menu-item>
+        </el-menu>
       </div>
       <div class="body">
         <el-table
@@ -140,7 +130,7 @@ const tableData: User[] = [
 .banner {
   left: 50%;
   margin-left: -450px;
-  margin-top: 250px;
+  margin-top: 242px;
   position: absolute;
   z-index: 999;
 

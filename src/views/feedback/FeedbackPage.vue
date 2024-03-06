@@ -19,7 +19,7 @@ const onSubmit = () => {
 </script>
 
 <template>
-  <div class="banner">
+  <div class="banner1">
     <div class="feedbackHead"></div>
     <div class="feedbackHead1"></div>
     <div class="feedbackFoot">
@@ -102,7 +102,7 @@ const onSubmit = () => {
 </template>
 
 <style scoped>
-.banner {
+.banner1 {
   position: relative;
   width: 100%;
   height: 1200px;

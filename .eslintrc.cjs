@@ -8,13 +8,15 @@ module.exports = {
     'eslint:recommended',
     '@vue/eslint-config-prettier/skip-formatting'
   ],
-  parserOptions: {
-    ecmaVersion: 'latest'
-  },
+  // parser: '@typescript-eslint/parser',
+  plugins: ['@typescript-eslint'],
+  "parser": "vue-eslint-parser",
+
+  "parserOptions":{"parser":"@typescript-eslint/parser"},
   // parser: "vue-eslint-parser",
   // parser: '@typescript-eslint/parser',
   // plugins: ['@typescript-eslint'],
-
+  // "parser": "babel-eslint",
   rules: {
     // 前置：
     //1. 禁用格式化插件 prettier format on save 关闭
@@ -33,6 +35,7 @@ module.exports = {
       'warn',
       {
         ignores: ['index'] // vue组件名称多单词组成（忽略index.vue）
+
       }
     ],
     'vue/no-setup-props-destructure': ['off'], // 关闭 props 解构的校验

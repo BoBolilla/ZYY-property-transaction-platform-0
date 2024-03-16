@@ -13,7 +13,7 @@ const radio5 = ref('不限')
   <div class="w">
     <div class="search">
       <el-input
-        style="width: 600px; height: 50px; margin: 50px, auto"
+        style="width: 600px; height: 50px; margin: 50px auto"
         v-model="input3"
         placeholder="请输入关键字"
         class="input-with-select"

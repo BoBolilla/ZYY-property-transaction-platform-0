@@ -3,7 +3,7 @@ import zhCn from 'element-plus/es/locale/lang/zh-cn'
 import { Search } from '@element-plus/icons-vue'
 import { ref } from 'vue'
 import { labelSearchAPI } from '@/api/search.js'
-let locale = zhCn;
+let locale = zhCn
 // startTime,endTime,minPrice,maxPrice,priceSort,projectDomain,propertyCategory,tradeMode
 
 const propertyCategory = ref('1')
@@ -13,7 +13,16 @@ const tradeMode = ref('1')
 const radio5 = ref('1')
 
 function labelSearch() {
-  labelSearchAPI(time[0],time[1],0,1000000000,1,projectDomain,propertyCategory,tradeMode).then((res) => {
+  labelSearchAPI(
+    time.value[0],
+    time.value[1],
+    0,
+    1000000000,
+    1,
+    projectDomain.value,
+    propertyCategory.value,
+    tradeMode.value
+  ).then((res) => {
     console.log(res)
   })
 }
@@ -28,7 +37,7 @@ const shortcuts = [
       const start = new Date()
       start.setTime(start.getTime() - 3600 * 1000 * 24 * 7)
       return [start, end]
-    },
+    }
   },
   {
     text: '一个月内',
@@ -37,7 +46,7 @@ const shortcuts = [
       const start = new Date()
       start.setTime(start.getTime() - 3600 * 1000 * 24 * 30)
       return [start, end]
-    },
+    }
   },
   {
     text: '三个月内',
@@ -46,8 +55,8 @@ const shortcuts = [
       const start = new Date()
       start.setTime(start.getTime() - 3600 * 1000 * 24 * 90)
       return [start, end]
-    },
-  },
+    }
+  }
 ]
 </script>
 
@@ -83,33 +92,34 @@ const shortcuts = [
           <span>项目领域</span>
           <el-radio-group v-model="projectDomain">
             <!-- <el-radio label="全部" >全部</el-radio> -->
-            <el-radio label="1" >针灸</el-radio>
-            <el-radio label="2" >方剂</el-radio>
-            <el-radio label="3" >推拿</el-radio>
-            <el-radio label="4" >药草</el-radio>
-            <el-radio label="5" >其他</el-radio>
+            <el-radio label="1">针灸</el-radio>
+            <el-radio label="2">方剂</el-radio>
+            <el-radio label="3">推拿</el-radio>
+            <el-radio label="4">药草</el-radio>
+            <el-radio label="5">其他</el-radio>
           </el-radio-group>
         </div>
         <div class="jylx">
           <span>交易类型</span>
           <el-radio-group v-model="tradeMode">
             <!-- <el-radio  label="全部" >全部</el-radio> -->
-            <el-radio  label="1">转让</el-radio>
-            <el-radio  label="3">作价投资</el-radio>
-            <el-radio  label="2">许可</el-radio>
-            <el-radio  label="4">其他</el-radio>
+            <el-radio label="1">转让</el-radio>
+            <el-radio label="3">作价投资</el-radio>
+            <el-radio label="2">许可</el-radio>
+            <el-radio label="4">其他</el-radio>
           </el-radio-group>
         </div>
         <div class="gpsj">
           <span>挂牌时间</span>
           <div class="time">
-            <el-config-provider :locale="locale"><el-date-picker
-              v-model="time"
-              type="datetimerange"
-              :shortcuts="shortcuts"
-              range-separator="至"
-              start-placeholder="开始日期"
-              end-placeholder="结束日期"
+            <el-config-provider :locale="locale"
+              ><el-date-picker
+                v-model="time"
+                type="datetimerange"
+                :shortcuts="shortcuts"
+                range-separator="至"
+                start-placeholder="开始日期"
+                end-placeholder="结束日期"
             /></el-config-provider>
             <div>{{ time[1] }}</div>
           </div>
@@ -123,10 +133,10 @@ const shortcuts = [
         <div class="gpjg">
           <span>挂牌价格</span>
           <el-radio-group v-model="radio5">
-            <el-radio  label="1" >不限</el-radio>
-            <el-radio label="2" >从高到低</el-radio>
-            <el-radio label="3" >从低到高</el-radio>
-            <el-radio  label="4" >自定义</el-radio>
+            <el-radio label="1">不限</el-radio>
+            <el-radio label="2">从高到低</el-radio>
+            <el-radio label="3">从低到高</el-radio>
+            <el-radio label="4">自定义</el-radio>
           </el-radio-group>
         </div>
       </div>

@@ -4,9 +4,9 @@ import { ref } from 'vue'
 import { ShoppingBag, Document } from '@element-plus/icons-vue'
 const input = ref('')
 
+const router = useRouter()
 const handleButtonClick = () => {
-  const router = useRouter()
-  router.push('/search') // 替换'/your-route'为您想要跳转的路由路径
+  router.push('/search')
 }
 </script>
 

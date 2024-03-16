@@ -1,12 +1,54 @@
 <script setup>
+import zhCn from 'element-plus/es/locale/lang/zh-cn'
 import { Search } from '@element-plus/icons-vue'
 import { ref } from 'vue'
+import { labelSearchAPI } from '@/api/search.js'
+let locale = zhCn;
+// startTime,endTime,minPrice,maxPrice,priceSort,projectDomain,propertyCategory,tradeMode
 
-const radio1 = ref('全部')
-const radio2 = ref('全部')
-const radio3 = ref('全部')
-const radio4 = ref('全部')
-const radio5 = ref('不限')
+const propertyCategory = ref('1')
+const projectDomain = ref('1')
+const tradeMode = ref('1')
+// const radio4 = ref('1')
+const radio5 = ref('1')
+
+function labelSearch() {
+  labelSearchAPI(time[0],time[1],0,1000000000,1,projectDomain,propertyCategory,tradeMode).then((res) => {
+    console.log(res)
+  })
+}
+
+const time = ref('')
+
+const shortcuts = [
+  {
+    text: '一周内',
+    value: () => {
+      const end = new Date()
+      const start = new Date()
+      start.setTime(start.getTime() - 3600 * 1000 * 24 * 7)
+      return [start, end]
+    },
+  },
+  {
+    text: '一个月内',
+    value: () => {
+      const end = new Date()
+      const start = new Date()
+      start.setTime(start.getTime() - 3600 * 1000 * 24 * 30)
+      return [start, end]
+    },
+  },
+  {
+    text: '三个月内',
+    value: () => {
+      const end = new Date()
+      const start = new Date()
+      start.setTime(start.getTime() - 3600 * 1000 * 24 * 90)
+      return [start, end]
+    },
+  },
+]
 </script>
 
 <template>
@@ -29,61 +71,66 @@ const radio5 = ref('不限')
       <div class="choose">
         <div class="cqlx">
           <span>产权类型</span>
-          <el-radio-group v-model="radio1">
-            <el-radio label="全部" value="全部" />
-            <el-radio label="专利" value="专利" />
-            <el-radio label="技术秘密" value="技术秘密" />
-            <el-radio label="商标" value="商标" />
-            <el-radio label="版权" value="版权" />
-            <el-radio label="集成电路" value="集成电路" />
-            <el-radio label="其他" value="其他" />
+          <el-radio-group v-model="propertyCategory">
+            <el-radio label="1" size="large">专利</el-radio>
+            <el-radio label="2" size="large">技术秘密</el-radio>
+            <el-radio label="3" size="large">商标</el-radio>
+            <el-radio label="4" size="large">版权</el-radio>
+            <el-radio label="5" size="large">其他</el-radio>
           </el-radio-group>
         </div>
         <div class="xmly">
           <span>项目领域</span>
-          <el-radio-group v-model="radio2">
-            <el-radio label="全部" value="全部" />
-            <el-radio label="生物医药" value="生物医药" />
-            <el-radio label="新材料" value="新材料" />
-            <el-radio label="新能源" value="新能源" />
-            <el-radio label="先进制造" value="先进制造" />
-            <el-radio label="农业科技" value="农业科技" />
-            <el-radio label="人工智能" value="人工智能" />
-            <el-radio label="航空航天" value="航空航天" />
-            <el-radio label="信息技术" value="信息技术" />
-            <el-radio label="其他" value="其他" />
+          <el-radio-group v-model="projectDomain">
+            <!-- <el-radio label="全部" >全部</el-radio> -->
+            <el-radio label="1" >针灸</el-radio>
+            <el-radio label="2" >方剂</el-radio>
+            <el-radio label="3" >推拿</el-radio>
+            <el-radio label="4" >药草</el-radio>
+            <el-radio label="5" >其他</el-radio>
           </el-radio-group>
         </div>
         <div class="jylx">
           <span>交易类型</span>
-          <el-radio-group v-model="radio3">
-            <el-radio label="全部" value="全部" />
-            <el-radio label="转让" value="转让" />
-            <el-radio label="作价投资" value="作价投资" />
-            <el-radio label="许可" value="许可" />
-            <el-radio label="其他" value="其他" />
+          <el-radio-group v-model="tradeMode">
+            <!-- <el-radio  label="全部" >全部</el-radio> -->
+            <el-radio  label="1">转让</el-radio>
+            <el-radio  label="3">作价投资</el-radio>
+            <el-radio  label="2">许可</el-radio>
+            <el-radio  label="4">其他</el-radio>
           </el-radio-group>
         </div>
         <div class="gpsj">
           <span>挂牌时间</span>
-          <el-radio-group v-model="radio4">
-            <el-radio label="全部" value="全部" />
-            <el-radio label="一周内" value="一周内" />
-            <el-radio label="一月内" value="一月内" />
-            <el-radio label="自定义" value="自定义" />
-          </el-radio-group>
+          <div class="time">
+            <el-config-provider :locale="locale"><el-date-picker
+              v-model="time"
+              type="datetimerange"
+              :shortcuts="shortcuts"
+              range-separator="至"
+              start-placeholder="开始日期"
+              end-placeholder="结束日期"
+            /></el-config-provider>
+            <div>{{ time[1] }}</div>
+          </div>
+          <!-- <el-radio-group v-model="radio4">
+            <el-radio   label="全部">全部</el-radio>
+            <el-radio   label="1">一周内</el-radio>
+            <el-radio   label="2">一月内</el-radio>
+            <el-radio   label="3">自定义</el-radio>
+          </el-radio-group> -->
         </div>
         <div class="gpjg">
           <span>挂牌价格</span>
           <el-radio-group v-model="radio5">
-            <el-radio label="不限" value="不限" />
-            <el-radio label="从高到低" value="从高到低" />
-            <el-radio label="从低到高" value="从低到高" />
-            <el-radio label="自定义" value="自定义" />
+            <el-radio  label="1" >不限</el-radio>
+            <el-radio label="2" >从高到低</el-radio>
+            <el-radio label="3" >从低到高</el-radio>
+            <el-radio  label="4" >自定义</el-radio>
           </el-radio-group>
         </div>
       </div>
-      <div class="btn"><button>确定筛选</button></div>
+      <div class="btn" @click="labelSearch()"><button>确定筛选</button></div>
     </div>
     <div class="show"></div>
   </div>
@@ -108,6 +155,9 @@ const radio5 = ref('不限')
   width: 1100px;
   margin-left: 50px;
   border-bottom: 1px solid rgb(188, 188, 188);
+}
+.time {
+  display: inline-block;
 }
 .choose {
   width: 1100px;

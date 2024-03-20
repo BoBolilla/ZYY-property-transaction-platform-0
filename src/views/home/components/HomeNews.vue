@@ -47,7 +47,7 @@ const newsStore = useNewsStore()
 <style scoped lang="scss">
 .container {
   height: 350px;
-  margin-top: 50px;
+
   margin-bottom: 50px;
 
   .left {

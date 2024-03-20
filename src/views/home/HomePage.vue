@@ -45,14 +45,31 @@ onMounted(() => {
     </div>
   </div>
   <HomeAchievement />
-  <HomeNews />
+  <div class="news">
+    <HomeNews />
+  </div>
 
   <HomeOrganization />
-  <HomeCooperation />
+  <div class="cooper">
+    <HomeCooperation />
+  </div>
+
   <HomeWork />
 </template>
 
 <style scoped>
+.cooper {
+  background-color: #f4f4f4;
+
+  padding-top: 20px;
+}
+
+.news {
+  background-color: #f4f4f4;
+
+  padding: 20px;
+}
+
 .show {
   position: absolute;
   top: 35vw;

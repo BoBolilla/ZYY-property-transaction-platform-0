@@ -9,9 +9,9 @@ defineProps({
 
 <template>
   <div class="home-banner">
-    <el-carousel height="auto" autoplay>
+    <el-carousel height="33vw" autoplay>
       <el-carousel-item
-        style="height: 35vw; width: 100%"
+        style="height: 33vw; width: 100%"
         v-for="item in bannerList"
         :key="item.id"
       >
@@ -24,7 +24,7 @@ defineProps({
 <style scoped>
 .home-banner {
   width: 100%;
-  height: 35vw;
+  height: 33vw;
 }
 
 img {

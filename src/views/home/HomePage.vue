@@ -7,6 +7,7 @@ import HomeOrganization from './components/HomeOrganization.vue'
 import HomeCooperation from './components/HomeCooperation.vue'
 import { onMounted, ref } from 'vue'
 import { getBannerAPI } from '@/api/home.js'
+import Chanyexhuanban from '@/views/home/components/Chanyexhuanban.vue'
 
 const bannerList = ref([])
 
@@ -48,13 +49,16 @@ onMounted(() => {
   <div class="news">
     <HomeNews />
   </div>
-
   <HomeOrganization />
-  <div class="cooper">
-    <HomeCooperation />
+  <div>
+    <Chanyexhuanban />
   </div>
 
-  <HomeWork />
+  <HomeCooperation />
+
+  <div class="cooper">
+    <HomeWork />
+  </div>
 </template>
 
 <style scoped>

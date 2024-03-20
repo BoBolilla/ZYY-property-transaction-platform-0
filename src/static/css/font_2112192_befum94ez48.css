@@ -1,0 +1,117 @@
+@font-face {font-family: "istte";
+  src: url('../fonts/font_2112192_befum94ez48.eot'); /* IE9 */
+  src: url('../fonts/font_2112192_befum94ez48.eot') format('embedded-opentype'), /* IE6-IE8 */
+  url('../fonts/83c9be558c5943ccb36929ab791a8071.woff') format('woff2'),
+  url('../fonts/font_2112192_befum94ez48.woff') format('woff'),
+  url('../fonts/font_2112192_befum94ez48.ttf') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('../fonts/font_2112192_befum94ez48.svg') format('svg'); /* iOS 4.1- */
+}
+
+.istte {
+  font-family: "istte" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.istte-transaction-1:before {
+  content: "\e653";
+}
+
+.istte-transaction-2:before {
+  content: "\e654";
+}
+
+.istte-transaction-3:before {
+  content: "\e655";
+}
+
+.istte-top:before {
+  content: "\e611";
+}
+
+.istte-qiye:before {
+  content: "\e650";
+}
+
+.istte-yanfajigou:before {
+  content: "\e651";
+}
+
+.istte-zhengfu:before {
+  content: "\e652";
+}
+
+.istte-sub:before {
+  content: "\eb9c";
+}
+
+.istte-triangle:before {
+  content: "\e6ac";
+}
+
+.istte-add:before {
+  content: "\e690";
+}
+
+.istte-number-1:before {
+  content: "\e649";
+}
+
+.istte-number-2:before {
+  content: "\e64a";
+}
+
+.istte-number-3:before {
+  content: "\e64b";
+}
+
+.istte-number-4:before {
+  content: "\e64c";
+}
+
+.istte-number-5:before {
+  content: "\e64d";
+}
+
+.istte-number-6:before {
+  content: "\e64e";
+}
+
+.istte-number-7:before {
+  content: "\e64f";
+}
+
+.istte-news:before {
+  content: "\e644";
+}
+
+.istte-roadshow:before {
+  content: "\e645";
+}
+
+.istte-ziyuan12:before {
+  content: "\e646";
+}
+
+.istte-news-2:before {
+  content: "\e647";
+}
+
+.istte-notice:before {
+  content: "\e648";
+}
+
+.istte-ziyuan15:before {
+  content: "\e640";
+}
+
+.istte-ziyuan18:before {
+  content: "\e641";
+}
+
+.istte-search:before {
+  content: "\e614";
+}
+

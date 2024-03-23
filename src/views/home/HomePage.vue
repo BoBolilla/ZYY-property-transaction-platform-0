@@ -8,6 +8,7 @@ import HomeCooperation from './components/HomeCooperation.vue'
 import { onMounted, ref } from 'vue'
 import { getBannerAPI } from '@/api/home.js'
 import Chanyexhuanban from '@/views/home/components/Chanyexhuanban.vue'
+import HomeVideo from '@/views/home/components/HomeVideo.vue'
 
 const bannerList = ref([])
 
@@ -55,13 +56,19 @@ onMounted(() => {
   </div>
 
   <HomeCooperation />
-
+  <div class="video">
+    <home-video> </home-video>
+  </div>
   <div class="cooper">
     <HomeWork />
   </div>
 </template>
 
 <style scoped>
+.video {
+  width: 1200px;
+  margin: 0 auto;
+}
 .cooper {
   background-color: #f4f4f4;
 

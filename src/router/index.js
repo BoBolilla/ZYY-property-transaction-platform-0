@@ -76,14 +76,6 @@ const router = createRouter({
               component: () => import('@/views/feedback/FeedbackRelease.vue')
             }
           ]
-        },
-        {
-          path: '/transaction', // 交易页
-          component: () => import('@/views/transaction/TransactionPage.vue')
-        },
-        {
-          path: '/search', // 搜索
-          component: () => import('@/views/transaction/SearchPage.vue')
         }
       ]
     }

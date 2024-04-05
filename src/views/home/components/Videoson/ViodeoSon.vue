@@ -15,7 +15,7 @@ console.log(a.item.systemUrl, 123)
 const playerOpts = {
   id: a.item.id, //元素id
   url: a.item.systemUrl, //视频地址
-  poster: 'https://zyychanquanjiaoyi.oss-cn-beijing.aliyuncs.com/2024/03/21/%E8%BD%AE%E6%92%AD%E5%9B%BE/%E5%9B%BE%E7%89%87/19b8a84bd0074881a18b6e8c26d460cb.jpg?Expires=2026360707&OSSAccessKeyId=LTAI5t6LqCyho9Eb782DEvVG&Signature=6izBGRuD1a7PaFBN9JW9g%2BtgJ4Q%3D', //封面图
+  poster: a.item.systemFuncDescription, //封面图
   lang: 'zh-cn', //设置中文
   lastPlayTime: 0, //视频起播时间（单位：秒）
   lastPlayTimeHideDelay: 5, //提示文字展示时长（单位：秒）

@@ -82,10 +82,17 @@ const newsStore = useNewsStore()
 img {
   width: 100%;
   height: 100%;
+  transition: all 2s;
 }
 .content-left {
   position: relative;
+  overflow: hidden;
 }
+img:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
 .newstitle-left {
   position: absolute;
   z-index: 1;

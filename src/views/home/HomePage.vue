@@ -81,13 +81,12 @@ onMounted(() => {
 
 <style scoped>
 .video {
-  width: 1200px;
+  width: 100%;
   margin: 0 auto;
+  background-color: #f4f4f4;
 }
 
 .cooper {
-  background-color: #f4f4f4;
-
   padding-top: 20px;
 }
 

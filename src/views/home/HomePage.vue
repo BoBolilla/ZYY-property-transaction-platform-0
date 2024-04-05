@@ -11,6 +11,11 @@ import Chanyexhuanban from '@/views/home/components/Chanyexhuanban.vue'
 import HomeVideo from '@/views/home/components/HomeVideo.vue'
 
 const bannerList = ref([])
+import AOS from 'aos'
+
+onMounted(() => {
+  AOS.init()
+})
 
 function getBanner() {
   getBannerAPI().then((res) => {
@@ -28,7 +33,8 @@ onMounted(() => {
   <div class="container">
     <HomeBanner :bannerList="bannerList" />
   </div>
-  <div class="show">
+
+  <div class="show animate__animated animate__fadeInDownBig">
     <div class="yj">
       <img src="@/assets/images/yj.png" />
       <h3>愿景</h3>
@@ -47,19 +53,28 @@ onMounted(() => {
     </div>
   </div>
   <HomeAchievement />
-  <div class="news">
+  <!--  新闻-->
+  <div class="news" data-aos="zoom-in">
     <HomeNews />
   </div>
-  <HomeOrganization />
-  <div>
+  <!--  机构信息-->
+  <div data-aos="fade-left">
+    <HomeOrganization />
+  </div>
+  <!--  产业模块-->
+  <div data-aos="fade-right">
     <Chanyexhuanban />
   </div>
-
-  <HomeCooperation />
-  <div class="video">
-    <home-video> </home-video>
+  <!--  交流合作-->
+  <div data-aos="zoom-out-up">
+    <HomeCooperation />
   </div>
-  <div class="cooper">
+  <!--  视频-->
+  <div class="video" data-aos="zoom-in">
+    <home-video></home-video>
+  </div>
+  <!--业务模块-->
+  <div class="cooper" data-aos="zoom-in">
     <HomeWork />
   </div>
 </template>
@@ -69,6 +84,7 @@ onMounted(() => {
   width: 1200px;
   margin: 0 auto;
 }
+
 .cooper {
   background-color: #f4f4f4;
 
@@ -83,8 +99,8 @@ onMounted(() => {
 
 .show {
   position: absolute;
-  top: 35vw;
-  left: 55vw;
+  top: 31vw;
+  left: 57vw;
   width: 500px;
   height: 250px;
   color: white;

@@ -3,7 +3,13 @@
 <template>
   <div class="achievement">
     <div class="content">
-      <h1>189.38</h1>
+      <AnimatedNumber
+        :from="0"
+        :to="192.15"
+        :decimal-digits="2"
+        :duration="3000"
+        class="size"
+      />
       <p>2023年累计成交金额/亿元</p>
     </div>
   </div>
@@ -19,7 +25,10 @@
   align-items: center;
   color: #606266;
 }
-
+.size {
+  font-weight: bold;
+  font-size: 25px;
+}
 .content {
   margin-top: 25px;
   text-align: center;

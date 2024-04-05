@@ -8,6 +8,15 @@ dependencies:
   '@element-plus/icons-vue':
     specifier: ^2.3.1
     version: 2.3.1(vue@3.4.15)
+  animate.css:
+    specifier: ^4.1.1
+    version: 4.1.1
+  animation-vue:
+    specifier: ^0.0.9
+    version: 0.0.9
+  aos:
+    specifier: ^2.3.4
+    version: 2.3.4
   axios:
     specifier: ^1.6.7
     version: 1.6.7
@@ -23,6 +32,9 @@ dependencies:
   vue:
     specifier: ^3.3.11
     version: 3.4.15(typescript@5.3.3)
+  vue-3-animated-number:
+    specifier: ^0.0.7
+    version: 0.0.7(typescript@5.3.3)
   vue-core-video-player:
     specifier: ^0.2.0
     version: 0.2.0(@typescript-eslint/parser@7.1.1)(eslint@8.56.0)
@@ -1109,6 +1121,14 @@ packages:
       json-schema-traverse: 0.4.1
       uri-js: 4.4.1
 
+  /animate.css@4.1.1:
+    resolution: {integrity: sha512-+mRmCTv6SbCmtYJCN4faJMNFVNN5EuCTTprDTAo7YzIGji2KADmakjVA3+8mVDkZ2Bf09vayB35lSQIex2+QaQ==}
+    dev: false
+
+  /animation-vue@0.0.9:
+    resolution: {integrity: sha512-BZphQj39udHyYyM0RDD/GrGzR/jDUM4NVY/ufgvrCKuxT6vGkaLVCbc9f0w3nKWVE6B6wjgtFONmzHDhaC6X+Q==}
+    dev: false
+
   /ansi-escapes@6.2.0:
     resolution: {integrity: sha512-kzRaCqXnpzWs+3z5ABPQiVke+iq0KXkHo8xiWV4RPTi5Yli0l97BEQuhXV1s7+aSU/fu1kUuxgS4MsQ0fRuygw==}
     engines: {node: '>=14.16'}
@@ -1150,6 +1170,14 @@ packages:
       normalize-path: 3.0.0
       picomatch: 2.3.1
     dev: true
+
+  /aos@2.3.4:
+    resolution: {integrity: sha512-zh/ahtR2yME4I51z8IttIt4lC1Nw0ktsFtmeDzID1m9naJnWXhCoARaCgNOGXb5CLy3zm+wqmRAEgMYB5E2HUw==}
+    dependencies:
+      classlist-polyfill: 1.2.0
+      lodash.debounce: 4.0.8
+      lodash.throttle: 4.1.1
+    dev: false
 
   /argparse@2.0.1:
     resolution: {integrity: sha512-8+9WqebbFzpX9OR+Wa6O29asIogeRMzcGtAINdpMHHyAg10f05aSFVBbcEqGf/PXw1EjAZ+q2/bEBg3DvurK3Q==}
@@ -1346,6 +1374,10 @@ packages:
     optionalDependencies:
       fsevents: 2.3.3
     dev: true
+
+  /classlist-polyfill@1.2.0:
+    resolution: {integrity: sha512-GzIjNdcEtH4ieA2S8NmrSxv7DfEV5fmixQeyTmqmRmRJPGpRBaSnA2a0VrCjyT8iW8JjEdMbKzDotAJf+ajgaQ==}
+    dev: false
 
   /cli-cursor@4.0.0:
     resolution: {integrity: sha512-VGtlMu3x/4DOtIUwEkRezxUZ2lBacNJCHash0N0WeZDBS+7Ux1dm3XWAgWYxLJFMMdOeXMHXorshEFhbMSGelg==}
@@ -2620,8 +2652,16 @@ packages:
       lodash-es: 4.17.21
     dev: false
 
+  /lodash.debounce@4.0.8:
+    resolution: {integrity: sha512-FT1yDzDYEoYWhnSGnpE/4Kj1fLZkDFyqRb7fNt6FdYOSxlUWAtp42Eh6Wb0rGIv/m9Bgo7x4GhQbm5Ys4SG5ow==}
+    dev: false
+
   /lodash.merge@4.6.2:
     resolution: {integrity: sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==}
+
+  /lodash.throttle@4.1.1:
+    resolution: {integrity: sha512-wIkUCfVKpVsWo3JSZlc+8MB5it+2AN5W8J7YVMST30UrvcQNZ1Okbj+rbVniijTWE6FGYy4XJq/rHkas8qJMLQ==}
+    dev: false
 
   /lodash@4.17.21:
     resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==}
@@ -3620,6 +3660,15 @@ packages:
     optionalDependencies:
       fsevents: 2.3.3
     dev: true
+
+  /vue-3-animated-number@0.0.7(typescript@5.3.3):
+    resolution: {integrity: sha512-OATx/L/Je6LjNy/Z7yjYmtEeQggpXLlaondj/36PvRKnEe4yhAA0Q4Jn3NQZ8LbYO70YvwzprSrq+nHzML1RLQ==}
+    engines: {node: '>=18.15.0'}
+    dependencies:
+      vue: 3.4.15(typescript@5.3.3)
+    transitivePeerDependencies:
+      - typescript
+    dev: false
 
   /vue-core-video-player@0.2.0(@typescript-eslint/parser@7.1.1)(eslint@8.56.0):
     resolution: {integrity: sha512-NmUohYKDeuZIZLjax/z4K4MlS//ZcEtSejFkCSznYb6/pO5MEeIyNB6MjBuoE11iswpCe2wb6y8O/RcF5LfMhw==}

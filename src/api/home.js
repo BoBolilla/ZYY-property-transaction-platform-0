@@ -4,7 +4,7 @@ export const getBannerAPI = () => {
   return httpInstance.get('/portal/system/selectSystemPage', {
     params: {
       pageNum: 0,
-      pageSize: 6,
+      pageSize: 3,
       systemFuncTag: '轮播图',
       systemResTag: '图片',
       systemStatus: 1

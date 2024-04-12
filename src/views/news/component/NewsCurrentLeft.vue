@@ -29,7 +29,9 @@ onMounted(() => {
 </script>
 <template>
   <RouterLink :to="`/newsDetail/${news.id}`" class="goods-item">
-    <el-image :src="news.articleCoverUrl" lazy />
+    <div class="aab">
+      <el-image :src="news.articleCoverUrl" lazy class="img" />
+    </div>
     <p class="name">
       {{ news.articleTitle }}
     </p>
@@ -65,15 +67,25 @@ onMounted(() => {
     transform: translate3d(0, -3px, 0);
     box-shadow: 0 3px 8px rgb(0 0 0 / 20%);
   }
-
+  .aab {
+    width: 100%;
+    height: 235px;
+    overflow: hidden;
+  }
   .el-image {
     border-radius: 12px 12px 0px 0px !important;
     border-bottom: #333333 solid 1px;
     width: 100%;
     height: 235px;
     box-sizing: border-box;
+    overflow: hidden;
   }
-
+  .img {
+    transition: all 0.5s;
+  }
+  .img:hover {
+    transform: scale(1.1);
+  }
   .name {
     width: 90%;
     margin: auto;

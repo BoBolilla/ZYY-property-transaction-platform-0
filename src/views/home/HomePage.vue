@@ -11,6 +11,7 @@ import Chanyexhuanban from '@/views/home/components/Chanyexhuanban.vue'
 import HomeVideo from '@/views/home/components/HomeVideo.vue'
 
 const bannerList = ref([])
+
 import AOS from 'aos'
 
 onMounted(() => {
@@ -97,9 +98,9 @@ onMounted(() => {
 }
 
 .show {
-  position: absolute;
-  top: 31vw;
-  left: 57vw;
+  float: right;
+  margin-top: -90px;
+  margin-right: 15%;
   width: 500px;
   height: 250px;
   color: white;

@@ -92,7 +92,7 @@ const showDl3 = ref(false)
           </dl>
         </li>
         <li class="mainmenu">
-          <router-link class="link" to="/transaction"> 交易大厅</router-link>
+          <a class="link" href="http://39.98.183.126:81"> 交易大厅</a>
         </li>
 
         <!-- <li class="mainmenu">

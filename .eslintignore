@@ -1,2 +1,3 @@
 src/static
 src/views/home/components/Videoson
+vite.config.js

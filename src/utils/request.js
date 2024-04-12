@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const baseURL = 'http://www.521lxy.top:8093'
+const baseURL = 'http://www.521lxy.top:8080'
 
 const instance = axios.create({
   // TODO 1. 基础地址，超时时间

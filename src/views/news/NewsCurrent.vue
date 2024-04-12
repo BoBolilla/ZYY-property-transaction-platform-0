@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from 'vue'
 import NewsCurrentLeft from '@/views/news/component/NewsCurrentLeft.vue'
-
+import { onMounted } from 'vue'
 import { getNewsAPI } from '@/api/news.js'
 // eslint-disable-next-line no-unused-vars
 const currentNewsList = ref([])
@@ -9,7 +9,11 @@ const currentNewsList = ref([])
 const currentPage = ref(1)
 const total = ref(0)
 const limit = ref(6)
+import AOS from 'aos'
 
+onMounted(() => {
+  AOS.init()
+})
 function getData(p = null) {
   if (typeof p == 'number') {
     currentPage.value = p
@@ -40,7 +44,7 @@ getData(1)
         v-for="news in currentNewsList"
         :key="news.id"
       >
-        <li class="li">
+        <li class="li" data-aos="zoom-in">
           <NewsCurrentLeft :news="news"></NewsCurrentLeft>
           <!--          <NewsCurrentLeft :good="good"></NewsCurrentLeft>-->
         </li>

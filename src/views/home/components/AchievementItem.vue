@@ -1,16 +1,20 @@
-<script setup></script>
+<script setup>
+defineProps({
+  item: Object
+})
+</script>
 
 <template>
   <div class="achievement">
     <div class="content">
       <AnimatedNumber
         :from="0"
-        :to="192.15"
+        :to="item.number"
         :decimal-digits="2"
         :duration="3000"
         class="size"
       />
-      <p>2023年累计成交金额/亿元</p>
+      <p>{{ item.detail }}</p>
     </div>
   </div>
 </template>
@@ -32,5 +36,9 @@
 .content {
   margin-top: 25px;
   text-align: center;
+}
+.achievement:hover {
+  color: white;
+  background-color: rgb(0, 113, 193);
 }
 </style>

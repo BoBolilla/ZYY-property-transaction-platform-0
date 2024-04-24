@@ -116,7 +116,7 @@ const showDl3 = ref(false)
 
 <style scoped lang="scss">
 .icon {
-  margin-left: 70px;
+  margin-left: 150px;
   width: 350px;
   height: 70px;
   margin-top: 10px;
@@ -124,7 +124,8 @@ const showDl3 = ref(false)
 }
 .search {
   margin-top: 15px;
-  margin-right: 10px;
+  margin-right: 250px;
+
   float: right;
   width: 400px;
   height: 65px;
